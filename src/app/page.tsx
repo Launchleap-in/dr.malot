@@ -58,6 +58,9 @@ export default function Home() {
           >
             Documentation
           </a>
+          <button className="flex h-12 w-full items-center justify-center rounded-full bg-primary-foreground px-5 text-primary transition-colors hover:opacity-90 md:w-[158px]">
+            Test Primary
+          </button>
         </div>
       </main>
     </div>
