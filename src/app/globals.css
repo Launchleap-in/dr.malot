@@ -1,32 +1,124 @@
 @import "tailwindcss";
 
+/* ========= */
+/* LIGHT MODE */
+/* ========= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background layers */
+  --bg-1: #ffffff;
+  --bg-2: #f3f4f6;
+
+  /* Text layers */
+  --tx-1: #171717;
+  --tx-2: #111827;
+
+  /* Primary brand */
   --primary: #2563eb;
-  --primary-foreground: #ffffff;
+  --primary-tx: #ffffff;
+
+  /* Muted / subtle */
+  --muted: #f4f4f5;
+  --muted-tx: #6b7280;
+
+  /* Accent */
+  --accent: #e5e7eb;
+  --accent-tx: #111827;
+
+  /* Borders & inputs */
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #2563eb;
+
+  /* Card / surfaces */
+  --card: #ffffff;
+  --card-tx: #171717;
+
+  /* Popover */
+  --popover: #ffffff;
+  --popover-tx: #171717;
+
+  /* Icons */
+  --ic: #6b7280;
 }
 
+/* Tailwind theme mapping */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Backgrounds */
+  --color-bg-1: var(--bg-1);
+  --color-bg-2: var(--bg-2);
+
+  /* Text colors */
+  --color-tx-1: var(--tx-1);
+  --color-tx-2: var(--tx-2);
+
+  /* Muted */
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-tx);
+
+  /* Accent / Card / Icon */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-tx);
+  --color-ic: var(--ic);
+
+  /* Borders & Inputs */
+  --color-border: var(--border);
+  --color-input: var(--input);
+
+  /* Popover */
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-tx);
 }
+
+/* ========= */
+/* DARK MODE */
+/* ========= */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --primary: #3b82f6;
-    --primary-foreground: #ffffff;
+    /* Background layers */
+    --bg-1: #faf7f2;
+    --bg-2: #e5dcd1;
+
+    /* Text layers */
+    --tx-1: #3e3a37;
+    --tx-2: #c38824;
+
+    /* Primary */
+    --primary: #3e3a37;
+    --primary-tx: #c79a4a;
+
+    /* Secondary */
+    --secondary: #4a5a5f;
+    --secondary-tx: #f9f6f1;
+
+    /* Muted */
+    --muted: #bc9552;
+    --muted-tx: #4f4b45;
+
+    /* Accent */
+    --accent: #ce9f8a;
+    --accent-tx: #ffffff;
+
+    /* Borders + Input */
+    --border: #d6d2ca;
+    --input: #e0ddd6;
+
+    /* Card */
+    --card: #ffffff;
+    --card-tx: #2f3542;
+
+    /* Icon */
+    --ic: #c79a4a;
   }
 }
 
+/* ========= */
+/* GLOBAL BODY */
+/* ========= */
+
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-1);
+  color: var(--tx-1);
   font-family: Arial, Helvetica, sans-serif;
 }
