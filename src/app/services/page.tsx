@@ -19,8 +19,9 @@ import {
   Star,
   ChevronRight,
 } from "lucide-react";
-import { Card, CardContent } from "@/src/components/ui/card";
+import TestimonialsLight from "@/src/components/TestiLight";
 import { Button } from "@/src/components/ui/button";
+import { Card, CardContent } from "@/src/components/ui/card";
 
 export default function FullServicePage() {
   const mainServices = [
@@ -35,6 +36,7 @@ export default function FullServicePage() {
       ],
       time: "30-90 mins",
       popular: true,
+      color: "bg-[#e3f2ed]", // Mint
     },
     {
       icon: Stethoscope,
@@ -43,6 +45,7 @@ export default function FullServicePage() {
       features: ["Titanium Implants", "Same Day Options", "Bone Grafting"],
       time: "60-120 mins",
       popular: true,
+      color: "bg-[#fbf7e3]", // Cream
     },
     {
       icon: Syringe,
@@ -51,6 +54,7 @@ export default function FullServicePage() {
       features: ["Rotary Endodontics", "Digital Anesthesia", "3D Imaging"],
       time: "45-90 mins",
       popular: false,
+      color: "bg-[#dbe0ff]", // Lavender
     },
     {
       icon: Sparkles,
@@ -59,6 +63,7 @@ export default function FullServicePage() {
       features: ["Ultrasonic Cleaning", "Air Polishing", "LED Whitening"],
       time: "45-60 mins",
       popular: true,
+      color: "bg-white border border-border", // White
     },
     {
       icon: ShieldCheck,
@@ -71,6 +76,7 @@ export default function FullServicePage() {
       ],
       time: "30-60 mins",
       popular: false,
+      color: "bg-[#e3f2ed]", // Mint
     },
     {
       icon: HeartPulse,
@@ -79,6 +85,7 @@ export default function FullServicePage() {
       features: ["Laser Therapy", "Deep Scaling", "Periodontal Surgery"],
       time: "60-90 mins",
       popular: false,
+      color: "bg-[#fbf7e3]", // Cream
     },
   ];
 
@@ -172,7 +179,7 @@ export default function FullServicePage() {
   const stats = [
     { number: "10,000+", label: "Happy Patients", icon: Users },
     { number: "15+", label: "Years Experience", icon: Award },
-    { number: "98%", label: "Success Rate", icon: Star },
+    { number: "98%", label: "Success Rate", icon: ShieldCheck },
     { number: "24/7", label: "Emergency Care", icon: Clock },
   ];
 
@@ -198,69 +205,71 @@ export default function FullServicePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-bg-1 text-tx-1 overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* ENHANCED HERO SECTION */}
-      <section className="px-6 md:px-16 py-24 text-center relative overflow-hidden">
-        <div className="absolute top-10 left-10 w-96 h-96 bg-bg-2 rounded-full blur-[140px] opacity-50"></div>
-        <div className="absolute bottom-10 right-10 w-80 h-80 bg-bg-2 rounded-full blur-[120px] opacity-40"></div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10"
-        >
-          <div className="inline-flex items-center gap-2 bg-bg-2/50 px-4 py-2 rounded-full mb-6 border border-border">
-            <Sparkles className="w-4 h-4 text-ic" />
-            <span className="text-sm font-medium">
-              Comprehensive Dental Care
-            </span>
-          </div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
-          >
-            Exceptional <span className="text-tx-2">Dental Care</span> for Your
-            Family
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-xl md:text-2xl max-w-4xl mx-auto text-tx-2 leading-relaxed mb-10"
-          >
-            Experience gentle, modern, and personalized care with treatments
-            designed to make your smile brighter, healthier, and more confident.
-            Your journey to optimal oral health starts here.
-          </motion.p>
+      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        <div className="max-w-[1600px] mx-auto bg-[#dbe0ff] rounded-[2.5rem] px-6 py-16 md:py-24 relative overflow-hidden text-center text-black">
+          <div className="absolute top-10 left-10 w-96 h-96 bg-white/40 rounded-full blur-[140px] opacity-60 pointer-events-none"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-white/40 rounded-full blur-[120px] opacity-50 pointer-events-none"></div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            transition={{ duration: 0.8 }}
+            className="relative z-10"
           >
-            <Button className="bg-tx-1 text-bg-1 hover:bg-tx-2 px-8 py-6 rounded-xl text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105">
-              Book Appointment Now
-              <Calendar className="ml-2 w-5 h-5" />
-            </Button>
-            <Button
-              variant="outline"
-              className="border-2 border-tx-1 text-tx-1 hover:bg-tx-1 hover:text-bg-1 px-8 py-6 rounded-xl text-lg font-semibold transition-all duration-300"
+            <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/20">
+              <Sparkles className="w-4 h-4 text-black" />
+              <span className="text-sm font-bold">
+                Comprehensive Dental Care
+              </span>
+            </div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
             >
-              Call Us Today
-              <Phone className="ml-2 w-5 h-5" />
-            </Button>
+              Exceptional <span className="text-black/60">Dental Care</span> for
+              Your Family
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-xl md:text-2xl max-w-4xl mx-auto text-black/70 leading-relaxed mb-10 font-medium"
+            >
+              Experience gentle, modern, and personalized care with treatments
+              designed to make your smile brighter, healthier, and more
+              confident. Your journey to optimal oral health starts here.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <Button className="bg-black text-white hover:bg-black/80 px-8 py-6 rounded-full text-lg font-bold shadow-xl transition-all duration-300 hover:scale-105">
+                Book Appointment Now
+                <Calendar className="ml-2 w-5 h-5" />
+              </Button>
+              <Button
+                variant="outline"
+                className="border-2 border-black/10 text-black hover:bg-black hover:text-white px-8 py-6 rounded-full text-lg font-bold transition-all duration-300 bg-transparent"
+              >
+                Call Us Today
+                <Phone className="ml-2 w-5 h-5" />
+              </Button>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </section>
 
       {/* STATS BAR */}
-      <section className="relative px-4 sm:px-6 lg:px-16 py-16 sm:py-20 bg-bg-2/30 backdrop-blur-sm border-y border-border/30 overflow-hidden">
+      <section className="relative px-4 sm:px-6 lg:px-16 py-16 sm:py-20 border-y border-border/30 overflow-hidden">
         {/* EXACT SAME GRID BACKGROUND AS CORE VALUES */}
         <div
           className="absolute inset-0 opacity-5 text-tx-1 pointer-events-none -z-10"
@@ -281,21 +290,23 @@ export default function FullServicePage() {
               className="text-center"
             >
               <div className="flex justify-center mb-3">
-                <div className="w-12 h-12 bg-bg-2 rounded-xl flex items-center justify-center">
-                  <stat.icon className="w-6 h-6 text-ic" />
+                <div className="w-12 h-12 bg-[#e3f2ed] rounded-xl flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-black" />
                 </div>
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-tx-1">
+              <div className="text-2xl md:text-3xl font-bold text-foreground">
                 {stat.number}
               </div>
-              <div className="text-tx-2 font-medium">{stat.label}</div>
+              <div className="text-muted-foreground font-medium">
+                {stat.label}
+              </div>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* ENHANCED MAIN SERVICES */}
-      <section className="px-6 md:px-16 py-20">
+      <section className="px-6 md:px-16 py-20 max-w-[1600px] mx-auto">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -303,13 +314,16 @@ export default function FullServicePage() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
-            Our <span className="text-tx-2">Comprehensive Services</span>
+            Our{" "}
+            <span className="text-muted-foreground">
+              Comprehensive Services
+            </span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-xl text-tx-2 max-w-3xl mx-auto"
+            className="text-xl text-muted-foreground max-w-3xl mx-auto"
           >
             From routine cleanings to advanced restorative procedures, we offer
             complete dental care for every stage of life.
@@ -328,27 +342,33 @@ export default function FullServicePage() {
             >
               {service.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="bg-tx-1 text-bg-1 px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
+                  <div className="bg-black text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
                     Most Popular
                   </div>
                 </div>
               )}
 
-              <Card className="bg-card border-2 border-border rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full overflow-hidden">
+              <Card
+                className={`${service.color} rounded-[2.5rem] shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full overflow-hidden border-0`}
+              >
                 <CardContent className="p-8 space-y-6 h-full flex flex-col">
                   <div className="flex items-start justify-between">
-                    <div className="w-16 h-16 bg-bg-2 rounded-2xl flex items-center justify-center shadow-md">
-                      <service.icon className="w-8 h-8 text-ic" />
+                    <div className="w-16 h-16 bg-white/60 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-sm">
+                      <service.icon className="w-8 h-8 text-black" />
                     </div>
-                    <div className="text-sm bg-bg-2/50 px-3 py-1 rounded-full flex items-center gap-1">
+                    <div className="text-sm bg-white/60 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1 text-black/80 font-medium">
                       <Clock className="w-3 h-3" />
                       {service.time}
                     </div>
                   </div>
 
                   <div className="space-y-4 flex-grow">
-                    <h3 className="text-2xl font-bold">{service.title}</h3>
-                    <p className="text-tx-2 leading-relaxed">{service.desc}</p>
+                    <h3 className="text-2xl font-bold text-black">
+                      {service.title}
+                    </h3>
+                    <p className="text-black/70 leading-relaxed font-medium">
+                      {service.desc}
+                    </p>
 
                     <div className="space-y-2">
                       {service.features.map((feature, idx) => (
@@ -356,14 +376,18 @@ export default function FullServicePage() {
                           key={idx}
                           className="flex items-center gap-2 text-sm"
                         >
-                          <BadgeCheck className="w-4 h-4 text-ic flex-shrink-0" />
-                          <span className="text-tx-1">{feature}</span>
+                          <div className="w-5 h-5 rounded-full bg-black/5 flex items-center justify-center">
+                            <BadgeCheck className="w-3 h-3 text-black flex-shrink-0" />
+                          </div>
+                          <span className="text-black/80 font-semibold">
+                            {feature}
+                          </span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <Button className="w-full bg-bg-2 text-tx-1 hover:bg-bg-2/80 border border-border mt-4 py-6 rounded-xl font-semibold transition-all duration-300 group">
+                  <Button className="w-full bg-black text-white hover:bg-black/80 border border-transparent mt-4 py-6 rounded-xl font-bold transition-all duration-300 group shadow-md">
                     Learn More
                     <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -375,7 +399,7 @@ export default function FullServicePage() {
       </section>
 
       {/* ENHANCED DETAILED SECTIONS */}
-      <section className="px-6 md:px-16 py-20 space-y-32 min-h-screen bg-bg-1 relative">
+      <section className="px-6 md:px-16 py-20 space-y-32 min-h-screen bg-background relative max-w-[1600px] mx-auto">
         {detailedSections.map((section, i) => (
           <motion.div
             key={i}
@@ -393,25 +417,27 @@ export default function FullServicePage() {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl group">
+              <div className="relative w-full max-w-xl rounded-3xl overflow-hidden shadow-2xl group">
                 <img
                   src={section.image}
                   alt={section.title}
-                  className="w-full h-72 md:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-72 md:h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
                 <motion.div
-                  className="absolute bottom-4 left-4 flex items-center gap-3"
+                  className="absolute bottom-6 left-6 flex items-center gap-4"
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.5 }}
                 >
-                  <div className="w-12 h-12 bg-bg-1/70 rounded-lg flex items-center justify-center shadow-lg backdrop-blur-sm">
-                    <section.icon className="w-6 h-6 text-bg-1" />
+                  <div className="w-14 h-14 bg-white/90 rounded-2xl flex items-center justify-center shadow-lg backdrop-blur-sm">
+                    <section.icon className="w-7 h-7 text-black" />
                   </div>
-                  <div className="text-bg-1">
-                    <div className="text-sm font-semibold">{section.title}</div>
-                    <div className="text-xs opacity-80">{section.stats}</div>
+                  <div className="text-white">
+                    <div className="text-lg font-bold">{section.title}</div>
+                    <div className="text-sm opacity-90 font-medium">
+                      {section.stats}
+                    </div>
                   </div>
                 </motion.div>
               </div>
@@ -419,14 +445,14 @@ export default function FullServicePage() {
 
             {/* Text — also swaps based on index with staggered animations */}
             <motion.div
-              className={`${i % 2 === 1 ? "md:order-first" : ""} space-y-6`}
+              className={`${i % 2 === 1 ? "md:order-first" : ""} space-y-8`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               <div>
                 <motion.h2
-                  className="text-4xl md:text-5xl font-bold mb-4"
+                  className="text-4xl md:text-5xl font-bold mb-6 text-foreground"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
@@ -434,18 +460,20 @@ export default function FullServicePage() {
                   {section.title}
                 </motion.h2>
                 <motion.div
-                  className="inline-flex items-center gap-2 bg-bg-2/50 px-4 py-2 rounded-full mb-4 shadow-md"
+                  className="inline-flex items-center gap-2 bg-[#e3f2ed] px-4 py-2 rounded-full mb-4 shadow-sm border border-[#d1e8df]"
                   initial={{ scale: 0.9, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.4, duration: 0.4 }}
                 >
-                  <Award className="w-4 h-4 text-ic" />
-                  <span className="text-sm font-semibold">{section.stats}</span>
+                  <Award className="w-4 h-4 text-black" />
+                  <span className="text-sm font-bold text-black/80">
+                    {section.stats}
+                  </span>
                 </motion.div>
               </div>
 
               <motion.p
-                className="text-lg text-tx-2 leading-relaxed"
+                className="text-xl text-muted-foreground leading-relaxed"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
@@ -454,7 +482,7 @@ export default function FullServicePage() {
               </motion.p>
 
               <motion.div
-                className="grid sm:grid-cols-2 gap-4"
+                className="grid sm:grid-cols-2 gap-5"
                 initial="hidden"
                 whileInView="visible"
                 variants={{
@@ -477,10 +505,12 @@ export default function FullServicePage() {
                     }}
                     transition={{ duration: 0.4 }}
                   >
-                    <div className="w-6 h-6 bg-bg-2 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:scale-110 group-hover:bg-ic/20 transition-all duration-200 shadow-sm">
-                      <BadgeCheck className="w-3 h-3 text-ic" />
+                    <div className="w-6 h-6 bg-[#fbf7e3] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:scale-110 transition-all duration-200 shadow-sm">
+                      <BadgeCheck className="w-3 h-3 text-black" />
                     </div>
-                    <span className="text-tx-1 leading-relaxed">{point}</span>
+                    <span className="text-foreground/80 font-medium leading-relaxed">
+                      {point}
+                    </span>
                   </motion.div>
                 ))}
               </motion.div>
@@ -490,7 +520,7 @@ export default function FullServicePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
               >
-                <Button className="bg-tx-1 text-bg-1 hover:bg-tx-2 px-6 py-4 rounded-xl font-semibold mt-4 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <Button className="bg-black text-white hover:bg-black/80 px-8 py-4 rounded-full font-bold mt-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
                   Explore {section.title}
                   <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                 </Button>
@@ -500,10 +530,10 @@ export default function FullServicePage() {
         ))}
       </section>
 
-      <section className="relative px-4 sm:px-6 lg:px-16 py-16 sm:py-20 bg-bg-2/30 backdrop-blur-sm border-y border-border/30 overflow-hidden">
+      <section className="relative px-4 sm:px-6 lg:px-16 py-16 sm:py-20 bg-[#e3f2ed]/30 backdrop-blur-sm border-y border-border/30 overflow-hidden">
         {/* EXACT SAME GRID BACKGROUND AS CORE VALUES */}
         <div
-          className="absolute inset-0 opacity-5 text-tx-1 pointer-events-none -z-10"
+          className="absolute inset-0 opacity-5 text-black pointer-events-none -z-10"
           style={{
             backgroundImage:
               "linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)",
@@ -517,8 +547,8 @@ export default function FullServicePage() {
           transition={{ duration: 0.7 }}
           className="text-center relative z-10 max-w-4xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 bg-bg-2/50 px-4 py-2 rounded-full mb-6 border border-border">
-            <Sparkles className="w-4 h-4 text-ic" />
+          <div className="inline-flex items-center gap-2 bg-white/50 px-4 py-2 rounded-full mb-6 border border-border">
+            <Sparkles className="w-4 h-4 text-black" />
             <span className="text-sm font-medium">Limited Time Offer</span>
           </div>
 
@@ -526,34 +556,34 @@ export default function FullServicePage() {
             Ready to Transform Your Smile?
           </h2>
 
-          <p className="text-xl text-tx-2 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
             Book your comprehensive dental consultation today and receive a
             complimentary teeth whitening kit with your first appointment. Your
             journey to a healthier, more confident smile starts with one click.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button className="bg-tx-1 text-bg-1 hover:bg-tx-2 px-8 py-6 rounded-xl text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105">
+            <Button className="bg-black text-white hover:bg-black/80 px-8 py-6 rounded-xl text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105">
               Book Your Appointment
               <Calendar className="ml-2 w-5 h-5" />
             </Button>
             <Button
               variant="outline"
-              className="border-2 border-tx-1 text-tx-1 hover:bg-tx-1 hover:text-bg-1 px-8 py-6 rounded-xl text-lg font-semibold transition-all duration-300"
+              className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 rounded-xl text-lg font-semibold transition-all duration-300 bg-transparent"
             >
               <Phone className="mr-2 w-5 h-5" />
-              Call: (555) 123-4567
+              Call: +91 77420 36693
             </Button>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-sm text-tx-2">
+          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
               <span>Mon-Fri: 8AM-7PM | Sat: 9AM-4PM</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              <span>123 Dental Street, Care City</span>
+              <span>Malot Dental Clinic, Udaipur, India</span>
             </div>
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4" />
@@ -564,67 +594,70 @@ export default function FullServicePage() {
       </section>
 
       {/* TESTIMONIALS SECTION */}
-      <section className="px-6 md:px-16 py-20 bg-bg-2/20">
-        <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-4"
-          >
-            What Our <span className="text-tx-2">Patients Say</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-xl text-tx-2 max-w-3xl mx-auto"
-          >
-            Don&lsquo;t just take our word for it - hear from our satisfied
-            patients about their experiences.
-          </motion.p>
-        </div>
+      <TestimonialsLight />
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+      <section className="relative px-4 sm:px-6 lg:px-16 py-16 sm:py-20 border-t border-border/30 overflow-hidden bg-black text-white">
+        {/* EXACT SAME GRID BACKGROUND AS CORE VALUES */}
+        <div
+          className="absolute inset-0 opacity-20 text-white pointer-events-none -z-10"
+          style={{
+            backgroundImage:
+              "linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)",
+            backgroundSize: "50px 50px",
+          }}
+        />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center relative z-10 max-w-4xl mx-auto"
+        >
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur px-4 py-2 rounded-full mb-6 border border-white/10">
+            <Sparkles className="w-4 h-4 text-white" />
+            <span className="text-sm font-medium">Limited Time Offer</span>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Transform Your Smile?
+          </h2>
+
+          <p className="text-xl text-white/70 max-w-2xl mx-auto mb-8 leading-relaxed">
+            Book your comprehensive dental consultation today and receive a
+            complimentary teeth whitening kit with your first appointment. Your
+            journey to a healthier, more confident smile starts with one click.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <Button className="bg-white text-black hover:bg-white/90 px-8 py-6 rounded-full text-lg font-bold shadow-lg transition-all duration-300 hover:scale-105">
+              Book Your Appointment
+              <Calendar className="ml-2 w-5 h-5" />
+            </Button>
+            <Button
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 rounded-full text-lg font-bold transition-all duration-300 bg-transparent"
             >
-              <Card className="bg-card border border-border rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                <CardContent className="p-8 space-y-6 h-full flex flex-col">
-                  <div className="flex gap-1">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 fill-yellow-400 text-yellow-400"
-                      />
-                    ))}
-                  </div>
+              <Phone className="mr-2 w-5 h-5" />
+              Call: +91 77420 36693
+            </Button>
+          </div>
 
-                  <p className="text-tx-2 leading-relaxed flex-grow italic">
-                    &#34;{testimonial.text}&quot;
-                  </p>
-
-                  <div className="border-t border-border pt-4">
-                    <div className="font-semibold text-tx-1">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-sm text-tx-2">
-                      {testimonial.treatment}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-sm text-white/60">
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4" />
+              <span>Mon-Fri: 8AM-7PM | Sat: 9AM-4PM</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4" />
+              <span>Malot Dental Clinic, Udaipur, India</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4" />
+              <span>Emergency Appointments Available</span>
+            </div>
+          </div>
+        </motion.div>
       </section>
-
-      {/* ENHANCED CTA SECTION */}
     </div>
   );
 }

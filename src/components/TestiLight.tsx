@@ -2,34 +2,34 @@
 import { AnimatedCard } from "./ui/animated-card";
 import { motion } from "framer-motion";
 
-export default function Testimonials() {
+export default function TestimonialsLight() {
   const testimonials = [
     {
-      name: "Alice Thompson",
-      role: "Marketing Manager",
+      name: "Sarah Johnson",
+      role: "Smile Makeover",
       img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200&h=200",
       review:
-        "It was the best decision I made for my oral health. The team is not only professional but also caring. They take the time to explain procedures and make sure you're comfortable every step of the way. Highly recommended.",
-    },
-    {
-      name: "Emily Davis",
-      role: "Teacher",
-      img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200",
-      review:
-        "As someone with dental anxiety, finding a clinic at ease was crucial. The team at Dento is understanding and patient. They address my concerns, and I appreciate the personalized care I receive. Thank you for making each visit a positive experience.",
+        "After years of hiding my smile, the cosmetic dentistry transformed my confidence. The digital preview showed exactly what to expect, and the results were even better!",
     },
     {
       name: "Michael Chen",
-      role: "Financial Analyst",
+      role: "Dental Implants",
       img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200",
       review:
-        "I've been a patient at Your Dental Practice for years, and the consistent high-quality service keeps me coming back. From routine cleanings to a more complex procedure, the professionalism and friendliness of the staff are unmatched.",
+        "The implant process was seamless and virtually painless. The team explained every step, and now I can eat anything without worry. Life-changing experience!",
+    },
+    {
+      name: "The Rodriguez Family",
+      role: "Family Dentistry",
+      img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200",
+      review:
+        "From our toddler's first visit to grandma's dentures, this practice handles all our family's needs with exceptional care and professionalism.",
     },
   ];
 
   return (
     <section className="px-4 sm:px-6 lg:px-8 py-8 bg-background">
-      <div className="max-w-[1600px] mx-auto bg-dark rounded-[2.5rem] p-8 sm:p-12 lg:p-20 text-white overflow-hidden">
+      <div className="max-w-[1600px] mx-auto bg-cream rounded-[2.5rem] p-8 sm:p-12 lg:p-20 text-black overflow-hidden">
         <div className="mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export default function Testimonials() {
           {/* Large Featured Testimonial */}
           <AnimatedCard
             variant="scale-in"
-            className="md:col-span-8 bg-cream text-black p-8 sm:p-10 min-h-[300px]"
+            className="md:col-span-8 bg-white text-black p-8 sm:p-10 min-h-[300px] border border-black/5 shadow-sm"
           >
             <div className="flex items-center gap-4 mb-8">
               <img
@@ -72,20 +72,20 @@ export default function Testimonials() {
                 key={i}
                 variant="slide-in-right"
                 delay={0.2 + i * 0.1}
-                className="bg-dark-card text-white grow"
+                className="bg-white text-black grow border border-black/5 shadow-sm"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <img
                     src={t.img}
                     alt={t.name}
-                    className="w-10 h-10 rounded-full object-cover border border-white/10"
+                    className="w-10 h-10 rounded-full object-cover border border-black/10"
                   />
                   <div>
                     <h4 className="font-bold text-base">{t.name}</h4>
-                    <p className="text-xs text-white/60">{t.role}</p>
+                    <p className="text-xs text-black/60">{t.role}</p>
                   </div>
                 </div>
-                <p className="text-sm text-white/80 leading-relaxed line-clamp-4">
+                <p className="text-sm text-black/70 leading-relaxed line-clamp-4">
                   {t.review}
                 </p>
               </AnimatedCard>

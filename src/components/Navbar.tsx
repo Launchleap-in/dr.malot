@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,98 +10,71 @@ export default function Navbar() {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
+    { label: "Gallery", href: "/gallery" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
 
   return (
-    <nav className="w-full bg-bg-2/80 backdrop-blur-xl border-b border-border/50 sticky top-0 z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 sm:h-20 items-center justify-between">
-          {/* Logo with hover effect */}
-
-          <span className="group flex items-center gap-2 text-2xl sm:text-3xl font-bold text-tx-1 hover:text-tx-2 transition-all duration-300">
-            MyBrand
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-tx-1 group-hover:w-full transition-all duration-300"></span>
-          </span>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
-            {navItems.map((item, index) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="relative px-4 py-2 text-sm font-medium text-tx-1 hover:text-tx-2 transition-all duration-300 group"
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                {item.label}
-                <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-tx-1 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-              </a>
-            ))}
-          </div>
-
-          {/* Desktop Action Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
-            <button className="relative px-6 py-2.5 text-sm font-semibold text-tx-1 border-2 border-tx-1 rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-lg hover:scale-105">
-              <span className="relative z-10 group-hover:text-bg-1 transition-colors duration-300">
-                Request Appointment
-              </span>
-              <span className="absolute inset-0 bg-tx-1 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-ic hover:text-tx-1 transition-colors duration-300 rounded-lg hover:bg-bg-1/50"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? (
-              <X className="h-6 w-6 sm:h-7 sm:w-7" />
-            ) : (
-              <Menu className="h-6 w-6 sm:h-7 sm:w-7" />
-            )}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-        }`}
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 sm:pt-6 pointer-events-none">
+      <motion.div 
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="pointer-events-auto bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg shadow-black/5 rounded-full px-6 py-3 flex items-center justify-between sm:justify-start gap-8 mx-2 sm:mx-4 text-black w-[96%] sm:w-auto"
       >
-        <div className="px-4 sm:px-6 pt-4 pb-6 space-y-3 bg-bg-1/95 backdrop-blur-lg border-t border-border/30">
-          {navItems.map((item, index) => (
+        {/* Logo */}
+        <a href="/" className="text-lg font-bold tracking-tight text-black mr-4">
+          Dr. Malot
+        </a>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-6">
+          {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="flex items-center justify-between px-4 py-3 text-base sm:text-lg font-medium text-tx-1 hover:text-tx-2 hover:bg-bg-2/50 rounded-lg transition-all duration-300 group"
-              style={{
-                animation: isOpen
-                  ? `slideIn 0.3s ease-out ${index * 50}ms both`
-                  : "none",
-              }}
-              onClick={() => setIsOpen(false)}
+              className="text-sm font-medium text-black/70 hover:text-black transition-colors"
             >
               {item.label}
-              <ChevronRight className="h-5 w-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
             </a>
           ))}
-
-          {/* Mobile Action Buttons */}
-          <div
-            className="pt-4 space-y-3"
-            style={{
-              animation: isOpen ? `slideIn 0.3s ease-out 200ms both` : "none",
-            }}
-          >
-            <button className="w-full px-6 py-3 text-base font-semibold text-tx-1 border-2 border-tx-1 rounded-lg hover:bg-bg-2 hover:text-tx-2 transition-all duration-300 hover:shadow-md">
-              Request Appointment
-            </button>
-          </div>
         </div>
-      </div>
+
+        {/* Action Button */}
+        <div className="hidden md:flex">
+            <button className="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-black/80 transition-colors">
+                Book Now
+            </button>
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden p-1 text-black"
+        >
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </motion.div>
+
+      {/* Mobile Menu Dropdown */}
+      {isOpen && (
+        <div className="pointer-events-auto absolute top-20 left-4 right-4 bg-white rounded-2xl shadow-xl p-4 flex flex-col gap-2 md:hidden origin-top animate-in slide-in-from-top-5 fade-in duration-200 border border-black/5">
+            {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => setIsOpen(false)}
+              className="px-4 py-3 rounded-xl hover:bg-gray-50 text-sm font-medium transition-colors text-black"
+            >
+              {item.label}
+            </a>
+          ))}
+           <button className="mt-2 w-full bg-black text-white px-5 py-3 rounded-xl text-sm font-medium">
+                Book Appointment
+            </button>
+        </div>
+      )}
     </nav>
   );
 }
