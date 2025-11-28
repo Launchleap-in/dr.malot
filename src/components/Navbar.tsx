@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,13 +41,20 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="pointer-events-auto bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg shadow-black/5 rounded-full px-6 py-3 flex items-center justify-between sm:justify-start gap-8 mx-2 sm:mx-4 text-black w-[96%] sm:w-auto"
       >
-        {/* Logo */}
+        {/* Logo
         <Link
           href="/"
           className="text-lg font-bold tracking-tight text-black mr-4"
         >
           Dr. Malot
-        </Link>
+        </Link> */}
+        <Image
+          src="/logoo.png"
+          alt="Dr. Malot Logo"
+          width={100}
+          height={100}
+          className="text-lg font-bold tracking-tight text-black mr-4"
+        />
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">

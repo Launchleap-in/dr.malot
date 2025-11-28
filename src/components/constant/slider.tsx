@@ -58,21 +58,21 @@ export default function BeforeAfterSlider({
     >
       {/* Layer 1: AFTER Image (Background, visible on the right) */}
       <div className="absolute inset-0 w-full h-full">
-         <img
-            src={after}
-            alt="After"
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-          />
-         <span className="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 text-xs rounded font-bold z-10">
-            AFTER
-         </span>
+        <img
+          src={after}
+          alt="After"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        />
+        <span className="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 text-xs rounded font-bold z-10">
+          AFTER
+        </span>
       </div>
 
       {/* Layer 2: BEFORE Image (Foreground, visible on the left, clipped) */}
-      <div 
+      <div
         className="absolute inset-0 w-full h-full"
-        style={{ 
-            clipPath: `inset(0 ${100 - position}% 0 0)` 
+        style={{
+          clipPath: `inset(0 ${100 - position}% 0 0)`,
         }}
       >
         <img
@@ -81,8 +81,8 @@ export default function BeforeAfterSlider({
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         />
         <span className="absolute top-4 left-4 bg-black/50 text-white px-2 py-1 text-xs rounded font-bold z-10">
-            BEFORE
-         </span>
+          BEFORE
+        </span>
       </div>
 
       {/* Divider Line */}
@@ -102,11 +102,20 @@ export default function BeforeAfterSlider({
           cursor-grab active:cursor-grabbing
         "
         style={{ left: `${position}%`, transform: `translate(-50%, -50%)` }}
-        onMouseDown={(e) => e.preventDefault()} 
+        onMouseDown={(e) => e.preventDefault()}
       >
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M8 19l-5-7 5-7" />
-            <path d="M16 5l5 7-5 7" />
+        <svg
+          width="10"
+          height="10"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M8 19l-5-7 5-7" />
+          <path d="M16 5l5 7-5 7" />
         </svg>
       </div>
     </div>

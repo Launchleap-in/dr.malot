@@ -10,22 +10,22 @@ export default function AboutPage() {
       {/* ===== ABOUT HERO ===== */}
       <section className="relative px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <div className="max-w-[1600px] mx-auto bg-[#e3f2ed] rounded-[2.5rem] px-6 py-16 md:py-24 relative overflow-hidden text-center">
-        {/* Soft Glow */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white/40 blur-[100px] opacity-70 pointer-events-none"></div>
-        
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="relative z-10 text-5xl md:text-7xl font-bold text-black mb-6"
-        >
-          About <span className="text-black/60">Our Clinic</span>
-        </motion.h1>
+          {/* Soft Glow */}
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white/40 blur-[100px] opacity-70 pointer-events-none"></div>
 
-        <p className="relative z-10 text-black/70 mt-4 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed font-medium">
-          Learn more about our story, philosophy, medical excellence, and the
-          passion behind every smile we create.
-        </p>
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 text-5xl md:text-7xl font-bold text-black mb-6"
+          >
+            About <span className="text-black/60">Our Clinic</span>
+          </motion.h1>
+
+          <p className="relative z-10 text-black/70 mt-4 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed font-medium">
+            Learn more about our story, philosophy, medical excellence, and the
+            passion behind every smile we create.
+          </p>
         </div>
       </section>
 
@@ -38,13 +38,38 @@ export default function AboutPage() {
           transition={{ duration: 0.7 }}
           className="space-y-6"
         >
-          <h2 className="text-4xl font-bold text-foreground">Our Story</h2>
+          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-foreground">
+            Our Story
+          </h2>
+
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Dr. Malot Dental Clinic began with a mission: to provide
-            exceptional, painless, and modern dental care that patients can
-            trust. Over the years, our clinic has grown into a center of
-            excellence known for precision, compassion, and advanced dental
-            techniques.
+            <span className="font-semibold text-foreground">
+              Dr. Rajnikant Malot Patron (Senior Doctor) MBBS, PGC, PGDD
+              Physician and Diabetologist
+            </span>{" "}
+            Our father is our inspiration. His teachings & knowledge guided us
+            to become what we are today.
+            <br />
+            <br />
+            <span className="font-semibold">
+              Our parental institute: – Dr. R K Malot is a renowned Physician &
+              a Diabetologist.
+            </span>{" "}
+            He is serving the mankind since past 35 years.
+            <br />
+            <br />
+            <span className="bg-yellow-100 px-1.5 py-0.5 rounded">
+              Dr. Malot Diagnostic Clinic is one of the first center of its kind
+              in the district of Banswara, Rajasthan
+            </span>{" "}
+            which is equipped with modern diagnostic facilities and an X-ray
+            house. He specializes in treating the diabetic patients.
+            <br />
+            <br />
+            <span className="font-medium text-foreground">
+              Dr. Malot Diabetic center is an institute which is dedicated for
+              treatment and management of complications related to Diabetes.
+            </span>
           </p>
 
           <p className="text-muted-foreground text-lg leading-relaxed">
@@ -56,8 +81,8 @@ export default function AboutPage() {
 
         {/* Image */}
         <motion.img
-          src="https://images.unsplash.com/photo-1629909615184-74f495363b66?auto=format&fit=crop&w=1100&q=85"
-          className="rounded-[2rem] shadow-2xl w-full object-cover h-[500px]"
+          src="/dr.malot.jpg"
+          className="rounded-[2rem] shadow-2xl w-full object-cover h-[800px]"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
@@ -137,7 +162,9 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
             >
-              <div className={`h-full ${item.color} rounded-3xl p-8 text-center space-y-4 hover:scale-105 transition-transform duration-300`}>
+              <div
+                className={`h-full ${item.color} rounded-3xl p-8 text-center space-y-4 hover:scale-105 transition-transform duration-300`}
+              >
                 <div className="w-16 h-16 mx-auto bg-white/80 backdrop-blur rounded-2xl flex items-center justify-center shadow-sm">
                   <item.icon className="w-8 h-8 text-black" />
                 </div>

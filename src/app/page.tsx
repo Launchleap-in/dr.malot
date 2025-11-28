@@ -4,6 +4,7 @@ import GalleryPage from "../components/GallerySlider";
 import DentistHome from "../components/Hero";
 import OurJourney from "../components/OurJourney";
 import ServicesPage from "../components/Service";
+import MeetOurTeam from "../components/team";
 import Testimonials from "../components/Testi";
 import WhyChooseUs from "../components/WhyChoose";
 
@@ -12,6 +13,7 @@ export default function Home() {
     <div>
       <DentistHome />
       <AboutClinic />
+      <MeetOurTeam />
       <WhyChooseUs />
       <ServicesPage />
       <GalleryPage />

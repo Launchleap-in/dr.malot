@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { AnimatedCard } from "./ui/animated-card";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Sparkles, Users, Coffee } from "lucide-react";
+import { Sparkles, Users, Coffee } from "lucide-react";
 
 export default function AboutClinic() {
   return (
@@ -52,7 +53,7 @@ export default function AboutClinic() {
             className="col-span-1 lg:col-span-1 bg-muted p-0 sm:p-0 min-h-[320px]"
           >
             <img
-              src="https://images.pexels.com/photos/3845806/pexels-photo-3845806.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="/team.jpg"
               alt="Dentist working"
               className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             />
@@ -97,7 +98,7 @@ export default function AboutClinic() {
             </div>
             <p className="text-black/60 text-sm leading-relaxed">
               Our team of qualified and caring professionals is dedicated to
-              providing the highest quality care and making every patient's
+              providing the highest quality care and making every patient&apos;s
               visit stress-free as possible.
             </p>
           </AnimatedCard>

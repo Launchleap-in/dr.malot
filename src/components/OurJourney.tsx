@@ -13,10 +13,13 @@ export default function OurJourney() {
   return (
     <section className="px-4 sm:px-6 lg:px-8 py-8 bg-background">
       <div className="max-w-[1600px] mx-auto bg-lavender rounded-[2.5rem] p-8 sm:p-12 lg:p-20 text-black overflow-hidden">
-        
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">A Journey of Excellence</h2>
-          <p className="text-black/60 max-w-2xl mx-auto">From humble beginnings to a leader in dental care.</p>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+            A Journey of Excellence
+          </h2>
+          <p className="text-black/60 max-w-2xl mx-auto">
+            From humble beginnings to a leader in dental care.
+          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -34,7 +37,6 @@ export default function OurJourney() {
             </AnimatedCard>
           ))}
         </div>
-
       </div>
     </section>
   );
