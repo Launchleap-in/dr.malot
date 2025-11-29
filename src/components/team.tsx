@@ -2,6 +2,7 @@
 import { AnimatedCard } from "./ui/animated-card";
 import { motion } from "framer-motion";
 import { Award, Heart, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export default function MeetOurTeam() {
   // ====== EDIT DATA HERE ======
@@ -70,9 +71,12 @@ export default function MeetOurTeam() {
             <p className="text-gray-400 text-lg max-w-md mb-8 leading-relaxed">
               {teamData.description}
             </p>
-            <button className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition-colors font-medium">
+            <Link
+              className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition-colors font-medium"
+              href={"/contact#ContactForm"}
+            >
               {teamData.buttonText}
-            </button>
+            </Link>
           </motion.div>
         </div>
 

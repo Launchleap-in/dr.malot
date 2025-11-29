@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { ArrowDown, Star, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 
 export default function DentistHome() {
   return (
@@ -61,9 +62,12 @@ export default function DentistHome() {
             transition={{ delay: 0.6 }}
             className="mt-12 flex flex-wrap gap-4 items-center"
           >
-            <button className="bg-black text-white px-8 py-4 rounded-full text-base sm:text-lg font-bold hover:scale-105 transition-transform duration-300 cursor-pointer shadow-xl shadow-black/10 w-full sm:w-auto">
+            <Link
+              className="bg-black text-white px-8 py-4 rounded-full text-base sm:text-lg font-bold hover:scale-105 transition-transform duration-300 cursor-pointer shadow-xl shadow-black/10 w-full sm:w-auto"
+              href={"/contact#ContactForm"}
+            >
               Book appointment
-            </button>
+            </Link>
 
             <div className="flex items-center gap-4 px-6 py-3 bg-white/40 rounded-full border border-white/40 w-full sm:w-auto justify-center sm:justify-start">
               <div className="flex -space-x-3">

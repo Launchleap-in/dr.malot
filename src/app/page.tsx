@@ -1,4 +1,5 @@
 import AboutClinic from "../components/About";
+import AppointmentSection from "../components/ContactForm";
 import FAQSection from "../components/Faq";
 import GalleryPage from "../components/GallerySlider";
 import DentistHome from "../components/Hero";
@@ -15,6 +16,7 @@ export default function Home() {
       <AboutClinic />
       <MeetOurTeam />
       <WhyChooseUs />
+      <AppointmentSection />
       <ServicesPage />
       <GalleryPage />
       <OurJourney />

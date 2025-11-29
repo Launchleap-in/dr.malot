@@ -2,6 +2,7 @@
 import { AnimatedCard } from "./ui/animated-card";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 export default function ServicesPage() {
   const services = [
@@ -51,9 +52,12 @@ export default function ServicesPage() {
               your overall well-being. Beyond addressing your immediate dental
               concerns.
             </p>
-            <button className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition-colors font-medium">
+            <Link
+              className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition-colors font-medium"
+              href={"/services"}
+            >
               All services →
-            </button>
+            </Link>
           </motion.div>
         </div>
 

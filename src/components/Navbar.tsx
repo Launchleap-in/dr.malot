@@ -71,9 +71,12 @@ export default function Navbar() {
 
         {/* Action Button */}
         <div className="hidden lg:flex items-center gap-3">
-          <button className="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-black/80 transition-colors">
+          <Link
+            className="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-black/80 transition-colors"
+            href={"/contact#ContactForm"}
+          >
             Book Now
-          </button>
+          </Link>
           {isMounted && (
             <button
               onClick={toggleTheme}
@@ -113,9 +116,12 @@ export default function Navbar() {
           ))}
 
           <div className="flex items-center gap-3 mt-2">
-            <button className="flex-1 bg-black text-white px-5 py-3 rounded-xl text-sm font-medium">
+            <Link
+              className="flex-1 bg-black text-white px-5 py-3 rounded-xl text-sm font-medium"
+              href={"/contact#ContactForm"}
+            >
               Book Appointment
-            </button>
+            </Link>
 
             {/* Mobile Menu Toggle + Theme Toggle */}
             <div className="flex items-center gap-3 md:hidden">
