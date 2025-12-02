@@ -114,9 +114,9 @@ export default function AboutClinic() {
               alt="Happy Patient Portrait"
               className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-sm font-bold text-black">
+            {/* <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-sm font-bold text-black">
               One Service at a Time
-            </div>
+            </div> */}
           </AnimatedCard>
         </div>
       </div>

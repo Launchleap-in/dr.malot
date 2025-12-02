@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/static-components */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { motion } from "framer-motion";
 import {
@@ -16,163 +18,305 @@ import {
   Calendar,
   Phone,
   MapPin,
-  Star,
   ChevronRight,
 } from "lucide-react";
 import TestimonialsLight from "@/src/components/TestiLight";
 import { Button } from "@/src/components/ui/button";
 import { Card, CardContent } from "@/src/components/ui/card";
+import { useState } from "react";
 
 export default function FullServicePage() {
+  const [openModal, setOpenModal] = useState(false);
+  type DetailedSectionType = (typeof detailedSections)[number];
+
+  const [selectedService, setSelectedService] =
+    useState<DetailedSectionType | null>(null);
   const mainServices = [
     {
       icon: SmilePlus,
       title: "Cosmetic Dentistry",
-      desc: "Transform your smile with advanced cosmetic treatments designed to enhance aesthetics and confidence.",
-      features: [
-        "Digital Smile Design",
-        "Laser Teeth Whitening",
-        "Veneers & Lumineers",
-      ],
+      desc: "Transform your smile with modern cosmetic dentistry.",
+      features: ["Smile Design", "Whitening", "Veneers"],
       time: "30-90 mins",
       popular: true,
-      color: "bg-[#e3f2ed]", // Mint
+      color: "bg-[#e3f2ed]",
     },
     {
       icon: Stethoscope,
       title: "Dental Implants",
-      desc: "Permanent, natural-looking replacements for missing teeth using advanced implant technology.",
-      features: ["Titanium Implants", "Same Day Options", "Bone Grafting"],
+      desc: "Strong, permanent replacements for missing teeth.",
+      features: ["Titanium Implants", "Same Day Surgery", "Bone Grafting"],
       time: "60-120 mins",
       popular: true,
-      color: "bg-[#fbf7e3]", // Cream
+      color: "bg-[#fbf7e3]",
     },
     {
       icon: Syringe,
       title: "Painless Root Canal",
-      desc: "Modern rotary tools allow fast, precise, and nearly painless root canal treatment.",
-      features: ["Rotary Endodontics", "Digital Anesthesia", "3D Imaging"],
+      desc: "Modern rotary tools for fast and comfortable treatment.",
+      features: ["Rotary Tools", "Digital Anesthesia", "3D Imaging"],
       time: "45-90 mins",
       popular: false,
-      color: "bg-[#dbe0ff]", // Lavender
+      color: "bg-[#dbe0ff]",
     },
     {
       icon: Sparkles,
       title: "Teeth Cleaning & Whitening",
-      desc: "Professional cleaning to remove stains + safe clinic-grade whitening for a brighter smile.",
-      features: ["Ultrasonic Cleaning", "Air Polishing", "LED Whitening"],
+      desc: "Deep cleaning + clinical-grade whitening session.",
+      features: ["Scaling", "Polishing", "LED Whitening"],
       time: "45-60 mins",
       popular: true,
-      color: "bg-white border border-border", // White
+      color: "bg-white border border-border",
     },
     {
       icon: ShieldCheck,
       title: "Preventive Dentistry",
-      desc: "Routine checkups, fluoride, sealants, and preventive solutions for lifelong oral health.",
-      features: [
-        "Digital X-Rays",
-        "Oral Cancer Screening",
-        "Custom Mouthguards",
-      ],
+      desc: "Early detection and preventive care for long-term health.",
+      features: ["X-ray", "Sealants", "Fluoride"],
       time: "30-60 mins",
       popular: false,
-      color: "bg-[#e3f2ed]", // Mint
+      color: "bg-[#e3f2ed]",
     },
     {
       icon: HeartPulse,
       title: "Gum Disease Treatment",
-      desc: "Advanced periodontal care for bleeding gums, infection control, and long-term gum health.",
-      features: ["Laser Therapy", "Deep Scaling", "Periodontal Surgery"],
+      desc: "Advanced periodontal therapy for gum health.",
+      features: ["Laser Therapy", "Deep Cleaning", "Gum Surgery"],
       time: "60-90 mins",
       popular: false,
-      color: "bg-[#fbf7e3]", // Cream
+      color: "bg-[#fbf7e3]",
+    },
+
+    // ⭐ NEW SERVICES BELOW
+    {
+      icon: Landmark,
+      title: "Orthodontics (Braces & Aligners)",
+      desc: "Straighten teeth with metal braces or invisible aligners.",
+      features: ["Metal Braces", "Clear Aligners", "Retainers"],
+      time: "Months-based",
+      popular: true,
+      color: "bg-[#e8f0ff]",
+    },
+    {
+      icon: SmilePlus,
+      title: "Smile Makeover",
+      desc: "Complete design and transformation of your smile.",
+      features: ["Design Preview", "Veneers", "Whitening"],
+      time: "2–4 Visits",
+      popular: true,
+      color: "bg-[#fff0f0]",
+    },
+    {
+      icon: Award,
+      title: "Full Mouth Rehabilitation",
+      desc: "Restore full function + aesthetics with advanced dentistry.",
+      features: ["Implants", "Crowns", "Bridges"],
+      time: "2–6 Months",
+      popular: true,
+      color: "bg-[#f3f9f1]",
+    },
+    {
+      icon: HeartPulse,
+      title: "Pediatric Dentistry",
+      desc: "Gentle and fun dental care designed for kids.",
+      features: ["Sealants", "Checkups", "Fluoride"],
+      time: "20–40 mins",
+      popular: true,
+      color: "bg-[#fdf3e7]",
+    },
+    {
+      icon: Scan,
+      title: "Oral Surgery",
+      desc: "Safe removal of wisdom teeth, cysts, and oral procedures.",
+      features: ["Wisdom Tooth Removal", "Biopsy", "Minor Surgery"],
+      time: "30–90 mins",
+      popular: false,
+      color: "bg-[#eef6ff]",
+    },
+    {
+      icon: Clock,
+      title: "Emergency Dentistry",
+      desc: "Immediate relief for pain, swelling, and trauma.",
+      features: ["Pain Relief", "Broken Tooth Fix", "Swelling Control"],
+      time: "15–45 mins",
+      popular: true,
+      color: "bg-[#ffeee3]",
     },
   ];
 
   const detailedSections = [
     {
       title: "Cosmetic Dentistry",
-      icon: SmilePlus,
       image:
-        " https://images.unsplash.com/photo-1684607633080-df59e6874367?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q29zbWV0aWMlMjBEZW50aXN0cnl8ZW58MHx8MHx8fDA%3D",
-      points: [
-        "Smile Makeovers - Complete smile transformation using digital planning",
-        "Porcelain Veneers - Custom-crafted thin shells bonded to front teeth",
-        "Composite Bonding - Tooth-colored resin to repair chips and gaps",
-        "Teeth Whitening - Professional-grade bleaching for 8+ shades brighter",
-        "Digital Smile Design - Preview your new smile with advanced 3D imaging",
-        "Gum Contouring - Reshape gum line for balanced, symmetrical smile",
-      ],
+        "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1200&q=60",
       description:
-        "Our cosmetic dentistry services combine artistic excellence with cutting-edge technology to create stunning, natural-looking smiles...",
-      stats: "95% Patient Satisfaction | 500+ Smiles Transformed",
+        "Cosmetic dentistry enhances your smile using advanced techniques and artistic precision.",
+      points: [
+        "Smile Makeovers",
+        "Porcelain Veneers",
+        "Composite Bonding",
+        "Laser Whitening",
+        "Digital Smile Design",
+      ],
+      stats: "95% Smiles Improved | 500+ Cases",
     },
     {
-      title: "Restorative Dentistry",
-      icon: Landmark,
+      title: "Dental Implants",
       image:
-        "https://plus.unsplash.com/premium_photo-1702598544413-12567f383896?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8UmVzdG9yYXRpdmUlMjBEZW50aXN0cnl8ZW58MHx8MHx8fDA%3D",
-      points: [
-        "Dental Crowns - Full coverage restorations for severely damaged teeth",
-        "Bridges - Fixed solutions to replace missing teeth",
-        "Tooth-colored Fillings - Mercury-free composite",
-        "Inlays & Onlays - Indirect restorations",
-        "Dentures - Custom-crafted removable replacements",
-        "Full Mouth Rehabilitation - Complete restoration of function & aesthetics",
-      ],
+        "https://images.unsplash.com/photo-1629909615184-74f4950d2c5c?auto=format&fit=crop&w=1200&q=60",
       description:
-        "Restore your teeth to their natural strength, function, and beauty...",
-      stats: "10-Year Warranty Available | Same-Day Crowns",
+        "Dental implants are permanent, durable, and natural-looking replacements for missing teeth.",
+      points: [
+        "Titanium Implants",
+        "Same-Day Implants",
+        "Bone Grafting",
+        "3D Guided Surgery",
+        "Implant Bridges",
+      ],
+      stats: "98% Success Rate | 20+ Years Longevity",
     },
     {
-      title: "Advanced Dentistry",
-      icon: Scan,
+      title: "Painless Root Canal",
       image:
-        "https://plus.unsplash.com/premium_photo-1723795298280-da877324ebfe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8UGVkaWF0cmljJTIwRGVudGlzdHJ5fGVufDB8fDB8fHww",
-      points: [
-        "Digital X-Rays - 90% less radiation",
-        "Rotary Endodontics - Faster root canal treatment",
-        "Laser Dentistry - Minimally invasive procedures",
-        "3D Imaging & Scans - CBCT technology",
-        "Intraoral Cameras - Real-time visualization",
-        "Sleep Dentistry - Comfortable options for anxious patients",
-      ],
+        "https://images.unsplash.com/photo-1629904853893-c2c8984d4aab?auto=format&fit=crop&w=1200&q=60",
       description:
-        "Experience the future of dental care with our advanced technology suite...",
-      stats: "Latest Technology | Reduced Treatment Time",
+        "Modern rotary technology and digital anesthesia make RCT smooth, accurate, and nearly painless.",
+      points: [
+        "Digital Anesthesia",
+        "Rotary Endodontics",
+        "Single-Sitting RCT",
+        "Post & Core",
+      ],
+      stats: "90% Faster Recovery | Zero Pain",
     },
     {
-      title: "Preventive Care",
-      icon: ShieldCheck,
+      title: "Teeth Cleaning & Whitening",
       image:
-        "https://images.unsplash.com/photo-1758205307912-5896ff0c65ae?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1598257006462-9f1e8700f02c?auto=format&fit=crop&w=1200&q=60",
+      description:
+        "Clinic-grade teeth whitening combined with deep cleaning for instant brightness.",
       points: [
-        "Comprehensive Oral Exams",
-        "Scaling & Polishing",
-        "Dental Sealants",
-        "Fluoride Treatments",
-        "Athletic Mouthguards",
-        "Oral Hygiene Education",
+        "Air Polishing",
+        "Ultrasonic Scaling",
+        "LED Whitening",
+        "Stain Removal",
       ],
-      description: "Prevention is the foundation of lifelong dental health...",
-      stats: "40% Fewer Cavities | Early Problem Detection",
+      stats: "Up to 8 Shades Whiter | Instant Results",
+    },
+    {
+      title: "Preventive Dentistry",
+      image:
+        "https://images.unsplash.com/photo-1629904987451-df190da5ead8?auto=format&fit=crop&w=1200&q=60",
+      description:
+        "Preventive dentistry focuses on avoiding dental problems before they develop.",
+      points: [
+        "Digital X-Rays",
+        "Oral Cancer Screening",
+        "Sealants",
+        "Fluoride Protection",
+      ],
+      stats: "40% Fewer Cavities | Early Detection",
+    },
+    {
+      title: "Gum Disease Treatment",
+      image:
+        "https://images.unsplash.com/photo-1629904854019-639a6f807682?auto=format&fit=crop&w=1200&q=60",
+      description:
+        "Restore gum health and stop bleeding or infection with advanced periodontal care.",
+      points: [
+        "Laser Gum Therapy",
+        "Deep Cleaning",
+        "Periodontal Surgery",
+        "Pocket Reduction",
+      ],
+      stats: "Health Restored | Bleeding Gone",
+    },
+
+    // ⭐ NEW DETAILED SERVICES
+    {
+      title: "Orthodontics (Braces & Aligners)",
+      image:
+        "https://images.unsplash.com/photo-1606811971618-9e3e5a83ad13?auto=format&fit=crop&w=1200&q=60",
+      description:
+        "Straighten teeth and enhance bite alignment with braces or invisible clear aligners.",
+      points: [
+        "Metal Braces",
+        "Ceramic Braces",
+        "Clear Aligners",
+        "Retainers",
+        "Growth Guidance",
+      ],
+      stats: "Perfect Alignment | Customized Treatment",
+    },
+    {
+      title: "Smile Makeover",
+      image:
+        "https://images.unsplash.com/photo-1552558636-9d50c72c7f59?auto=format&fit=crop&w=1200&q=60",
+      description:
+        "A full smile transformation with veneers, whitening, bonding, and advanced planning.",
+      points: [
+        "Digital Smile Design",
+        "Veneers",
+        "Whitening",
+        "Gum Contouring",
+      ],
+      stats: "Premium Smile Design | Celebrity-Level Results",
+    },
+    {
+      title: "Full Mouth Rehabilitation",
+      image:
+        "https://images.unsplash.com/photo-1629904854100-cdea5ed1fc5a?auto=format&fit=crop&w=1200&q=60",
+      description:
+        "A complete reconstruction of all teeth to restore chewing, bite, and aesthetics.",
+      points: [
+        "Implants",
+        "Crowns & Bridges",
+        "Bite Correction",
+        "Jaw Alignment",
+      ],
+      stats: "Total Restoration | Multi-Stage Precision",
     },
     {
       title: "Pediatric Dentistry",
-      icon: HeartPulse,
       image:
-        "https://plus.unsplash.com/premium_photo-1723795298280-da877324ebfe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8UGVkaWF0cmljJTIwRGVudGlzdHJ5fGVufDB8fDB8fHww",
-      points: [
-        "Child-Friendly Checkups",
-        "Fluoride Varnish",
-        "Habit Counseling",
-        "Protective Sealants",
-        "Emergency Dental Care",
-        "Growth & Development Monitoring",
-      ],
+        "https://images.unsplash.com/photo-1606811971749-522d7c44c46f?auto=format&fit=crop&w=1200&q=60",
       description:
-        "We create positive dental experiences that set the stage for lifelong oral health...",
-      stats: "Specialized Pediatric Training | Fun, Educational Visits",
+        "Gentle, friendly, and fun care that helps children feel comfortable.",
+      points: [
+        "Kids Checkups",
+        "Cavity Prevention",
+        "Sealants",
+        "Fluoride Therapy",
+      ],
+      stats: "Kid-Friendly Clinic | Zero Anxiety",
+    },
+    {
+      title: "Oral Surgery",
+      image:
+        "https://images.unsplash.com/photo-1629909615342-17c3ad8d1f84?auto=format&fit=crop&w=1200&q=60",
+      description:
+        "Safe and advanced surgical care for wisdom teeth, cysts, and oral conditions.",
+      points: [
+        "Wisdom Tooth Removal",
+        "Biopsy",
+        "Cyst Removal",
+        "Minor Surgeries",
+      ],
+      stats: "Safe Procedures | Fast Recovery",
+    },
+    {
+      title: "Emergency Dentistry",
+      image:
+        "https://images.unsplash.com/photo-1629904854019-639a6f807682?auto=format&fit=crop&w=1200&q=60",
+      description:
+        "Immediate care for dental swelling, pain, bleeding, and trauma.",
+      points: [
+        "Immediate Pain Relief",
+        "Broken Tooth Fix",
+        "Infection Control",
+        "Swelling Management",
+      ],
+      stats: "24/7 Support | Fast Relief",
     },
   ];
 
@@ -183,29 +327,73 @@ export default function FullServicePage() {
     { number: "24/7", label: "Emergency Care", icon: Clock },
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      treatment: "Smile Makeover",
-      text: "After years of hiding my smile, the cosmetic dentistry transformed my confidence. The digital preview showed exactly what to expect, and the results were even better!",
-      rating: 5,
-    },
-    {
-      name: "Michael Chen",
-      treatment: "Dental Implants",
-      text: "The implant process was seamless and virtually painless. The team explained every step, and now I can eat anything without worry. Life-changing experience!",
-      rating: 5,
-    },
-    {
-      name: "The Rodriguez Family",
-      treatment: "Family Dentistry",
-      text: "From our toddler's first visit to grandma's dentures, this practice handles all our family's needs with exceptional care and professionalism.",
-      rating: 5,
-    },
-  ];
+  const Modal = () =>
+    openModal && selectedService ? (
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+        <div className="bg-white rounded-3xl max-w-3xl w-full shadow-xl overflow-hidden relative">
+          <button
+            onClick={() => setOpenModal(false)}
+            className="absolute top-4 right-4 bg-black/10 hover:bg-black/20 text-black rounded-full w-10 h-10 flex items-center justify-center text-xl"
+          >
+            ✕
+          </button>
+
+          {/* HEADER */}
+          <div className="p-8 border-b border-border">
+            <h2 className="text-3xl font-bold mb-3 text-black">
+              {selectedService.title}
+            </h2>
+            <p className="text-black/60 font-medium">
+              {selectedService.description}
+            </p>
+          </div>
+
+          {/* IMAGE */}
+          <img
+            src={selectedService.image}
+            alt={selectedService.title}
+            className="w-full h-80 object-cover"
+          />
+
+          {/* POINTS */}
+          <div className="p-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {selectedService.points.map((point, idx) => (
+              <div key={idx} className="flex items-start gap-2">
+                <div className="w-6 h-6 bg-[#fbf7e3] rounded-full flex items-center justify-center">
+                  <BadgeCheck className="w-3 h-3 text-black" />
+                </div>
+                <p className="text-black/80 font-medium">{point}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    ) : null;
+
+  // const testimonials = [
+  //   {
+  //     name: "Sarah Johnson",
+  //     treatment: "Smile Makeover",
+  //     text: "After years of hiding my smile, the cosmetic dentistry transformed my confidence. The digital preview showed exactly what to expect, and the results were even better!",
+  //     rating: 5,
+  //   },
+  //   {
+  //     name: "Michael Chen",
+  //     treatment: "Dental Implants",
+  //     text: "The implant process was seamless and virtually painless. The team explained every step, and now I can eat anything without worry. Life-changing experience!",
+  //     rating: 5,
+  //   },
+  //   {
+  //     name: "The Rodriguez Family",
+  //     treatment: "Family Dentistry",
+  //     text: "From our toddler's first visit to grandma's dentures, this practice handles all our family's needs with exceptional care and professionalism.",
+  //     rating: 5,
+  //   },
+  // ];
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <Modal />
       {/* ENHANCED HERO SECTION */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <div className="max-w-[1600px] mx-auto bg-[#dbe0ff] rounded-[2.5rem] px-6 py-16 md:py-24 relative overflow-hidden text-center text-black">
@@ -349,7 +537,16 @@ export default function FullServicePage() {
               )}
 
               <Card
-                className={`${service.color} rounded-[2.5rem] shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full overflow-hidden border-0`}
+                onClick={() => {
+                  const match = detailedSections.find(
+                    (d) => d.title === service.title
+                  );
+                  if (match) {
+                    setSelectedService(match);
+                    setOpenModal(true);
+                  }
+                }}
+                className={`${service.color} cursor-pointer rounded-[2.5rem] shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full overflow-hidden border-0`}
               >
                 <CardContent className="p-8 space-y-6 h-full flex flex-col">
                   <div className="flex items-start justify-between">
@@ -399,202 +596,12 @@ export default function FullServicePage() {
       </section>
 
       {/* ENHANCED DETAILED SECTIONS */}
-      <section className="px-6 md:px-16 py-20 space-y-32 min-h-screen bg-background relative max-w-[1600px] mx-auto">
-        {detailedSections.map((section, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, x: i % 2 === 0 ? -60 : 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="grid md:grid-cols-2 gap-16 items-center"
-          >
-            {/* Image — swap sides based on index with enhanced hover effects */}
-            <motion.div
-              className={`${
-                i % 2 === 1 ? "md:order-last" : ""
-              } flex justify-center`}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="relative w-full max-w-xl rounded-3xl overflow-hidden shadow-2xl group">
-                <img
-                  src={section.image}
-                  alt={section.title}
-                  className="w-full h-72 md:h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
-                <motion.div
-                  className="absolute bottom-6 left-6 flex items-center gap-4"
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.5, duration: 0.5 }}
-                >
-                  <div className="w-14 h-14 bg-white/90 rounded-2xl flex items-center justify-center shadow-lg backdrop-blur-sm">
-                    <section.icon className="w-7 h-7 text-black" />
-                  </div>
-                  <div className="text-white">
-                    <div className="text-lg font-bold">{section.title}</div>
-                    <div className="text-sm opacity-90 font-medium">
-                      {section.stats}
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
-
-            {/* Text — also swaps based on index with staggered animations */}
-            <motion.div
-              className={`${i % 2 === 1 ? "md:order-first" : ""} space-y-8`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-            >
-              <div>
-                <motion.h2
-                  className="text-4xl md:text-5xl font-bold mb-6 text-foreground"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.5 }}
-                >
-                  {section.title}
-                </motion.h2>
-                <motion.div
-                  className="inline-flex items-center gap-2 bg-[#e3f2ed] px-4 py-2 rounded-full mb-4 shadow-sm border border-[#d1e8df]"
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{ delay: 0.4, duration: 0.4 }}
-                >
-                  <Award className="w-4 h-4 text-black" />
-                  <span className="text-sm font-bold text-black/80">
-                    {section.stats}
-                  </span>
-                </motion.div>
-              </div>
-
-              <motion.p
-                className="text-xl text-muted-foreground leading-relaxed"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-              >
-                {section.description}
-              </motion.p>
-
-              <motion.div
-                className="grid sm:grid-cols-2 gap-5"
-                initial="hidden"
-                whileInView="visible"
-                variants={{
-                  hidden: { opacity: 0 },
-                  visible: {
-                    opacity: 1,
-                    transition: {
-                      staggerChildren: 0.1,
-                    },
-                  },
-                }}
-              >
-                {section.points.map((point, idx) => (
-                  <motion.div
-                    key={idx}
-                    className="flex gap-3 items-start group"
-                    variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: { opacity: 1, y: 0 },
-                    }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    <div className="w-6 h-6 bg-[#fbf7e3] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:scale-110 transition-all duration-200 shadow-sm">
-                      <BadgeCheck className="w-3 h-3 text-black" />
-                    </div>
-                    <span className="text-foreground/80 font-medium leading-relaxed">
-                      {point}
-                    </span>
-                  </motion.div>
-                ))}
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-              >
-                <Button className="bg-black text-white hover:bg-black/80 px-8 py-4 rounded-full font-bold mt-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
-                  Explore {section.title}
-                  <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-                </Button>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        ))}
-      </section>
-
-      <section className="relative px-4 sm:px-6 lg:px-16 py-16 sm:py-20 bg-[#e3f2ed]/30 backdrop-blur-sm border-y border-border/30 overflow-hidden">
-        {/* EXACT SAME GRID BACKGROUND AS CORE VALUES */}
-        <div
-          className="absolute inset-0 opacity-5 text-black pointer-events-none -z-10"
-          style={{
-            backgroundImage:
-              "linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)",
-            backgroundSize: "50px 50px",
-          }}
-        />
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center relative z-10 max-w-4xl mx-auto"
-        >
-          <div className="inline-flex items-center gap-2 bg-white/50 px-4 py-2 rounded-full mb-6 border border-border">
-            <Sparkles className="w-4 h-4 text-black" />
-            <span className="text-sm font-medium">Limited Time Offer</span>
-          </div>
-
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform Your Smile?
-          </h2>
-
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Book your comprehensive dental consultation today and receive a
-            complimentary teeth whitening kit with your first appointment. Your
-            journey to a healthier, more confident smile starts with one click.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button className="bg-black text-white hover:bg-black/80 px-8 py-6 rounded-xl text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105">
-              Book Your Appointment
-              <Calendar className="ml-2 w-5 h-5" />
-            </Button>
-            <Button
-              variant="outline"
-              className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 rounded-xl text-lg font-semibold transition-all duration-300 bg-transparent"
-            >
-              <Phone className="mr-2 w-5 h-5" />
-              Call: +91 77420 36693
-            </Button>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
-              <span>Mon-Fri: 8AM-7PM | Sat: 9AM-4PM</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
-              <span>Malot Dental Clinic, Udaipur, India</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4" />
-              <span>Emergency Appointments Available</span>
-            </div>
-          </div>
-        </motion.div>
-      </section>
 
       {/* TESTIMONIALS SECTION */}
-      <TestimonialsLight />
+      <div>
+        {" "}
+        <TestimonialsLight />
+      </div>
 
       <section className="relative px-4 sm:px-6 lg:px-16 py-16 sm:py-20 border-t border-border/30 overflow-hidden bg-black text-white">
         {/* EXACT SAME GRID BACKGROUND AS CORE VALUES */}

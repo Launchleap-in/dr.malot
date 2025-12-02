@@ -7,22 +7,37 @@ import Link from "next/link";
 export default function ServicesPage() {
   const services = [
     {
-      title: "General Dentistry",
-      desc: "Your comfort is our priority. From the moment you step into our office, our friendly staff is here to ensure a positive experience.",
-      color: "bg-lavender", // Lavender
+      title: "Implant Dentistry",
+      desc: "Restore your smile’s function and appearance with durable, natural-looking dental implants tailored to your unique needs.",
+      color: "bg-lavender",
       textColor: "text-black",
+      points: [
+        "• Single & multiple implants",
+        "• Full mouth implant restorations",
+        "• Implant-supported dentures",
+      ],
     },
     {
-      title: "Cosmetic Dentistry",
-      desc: "Your comfort is our priority. From the moment you step into our office, our friendly staff is here to ensure a positive experience.",
-      color: "bg-mint", // Mint
+      title: "Kids Dentistry",
+      desc: "Creating positive dental experiences for children through gentle care, preventive treatments, and a fun, comforting environment.",
+      color: "bg-mint",
       textColor: "text-black",
+      points: [
+        "• Preventive cleanings",
+        "• Sealants & fluoride treatments",
+        "• Pediatric exams & fillings",
+      ],
     },
     {
       title: "Restorative Dentistry",
-      desc: "Your comfort is our priority. From the moment you step into our office, our friendly staff is here to ensure a positive experience.",
-      color: "bg-cream", // Cream/Yellow
+      desc: "Repair and enhance damaged teeth with advanced restorative treatments designed to improve function, comfort, and aesthetics.",
+      color: "bg-cream",
       textColor: "text-black",
+      points: [
+        "• Crowns & bridges",
+        "• Tooth-colored fillings",
+        "• Dentures & partials",
+      ],
     },
   ];
 
@@ -78,15 +93,16 @@ export default function ServicesPage() {
                 <h3 className="text-2xl sm:text-3xl font-bold mb-4 leading-tight">
                   {service.title}
                 </h3>
+
                 <p className="opacity-80 text-sm sm:text-base leading-relaxed mb-4">
                   {service.desc}
                 </p>
 
-                {/* List points (decorative based on image) */}
+                {/* Dynamic List Points */}
                 <ul className="text-xs font-medium opacity-60 space-y-1 mt-6">
-                  <li>• Dentures and partials</li>
-                  <li>• Crowns and bridges</li>
-                  <li>• Dental implants</li>
+                  {service.points.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
                 </ul>
               </div>
             </AnimatedCard>

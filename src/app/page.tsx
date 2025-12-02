@@ -14,9 +14,9 @@ export default function Home() {
     <div>
       <DentistHome />
       <AboutClinic />
+      <AppointmentSection />
       <MeetOurTeam />
       <WhyChooseUs />
-      <AppointmentSection />
       <ServicesPage />
       <GalleryPage />
       <OurJourney />
