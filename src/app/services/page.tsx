@@ -148,175 +148,182 @@ export default function FullServicePage() {
     {
       title: "Cosmetic Dentistry",
       image:
-        "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1200&q=60",
+        "https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=1200",
       description:
-        "Cosmetic dentistry enhances your smile using advanced techniques and artistic precision.",
+        "Enhance your smile's aesthetics with our advanced cosmetic treatments, designed to improve color, shape, and overall appearance.",
       points: [
-        "Smile Makeovers",
-        "Porcelain Veneers",
-        "Composite Bonding",
-        "Laser Whitening",
-        "Digital Smile Design",
+        "Digital Smile Design & Consultation",
+        "Porcelain Veneers for Flawless Looks",
+        "Composite Bonding for Minor Corrections",
+        "Laser Teeth Whitening for Brightness",
+        "Gum Contouring & Reshaping",
       ],
       stats: "95% Smiles Improved | 500+ Cases",
     },
     {
       title: "Dental Implants",
       image:
-        "https://images.unsplash.com/photo-1629909615184-74f4950d2c5c?auto=format&fit=crop&w=1200&q=60",
+        "https://images.pexels.com/photos/3845621/pexels-photo-3845621.jpeg?auto=compress&cs=tinysrgb&w=1200",
       description:
-        "Dental implants are permanent, durable, and natural-looking replacements for missing teeth.",
+        "Restore missing teeth with durable, natural-looking implants that function and feel just like your own.",
       points: [
-        "Titanium Implants",
-        "Same-Day Implants",
-        "Bone Grafting",
-        "3D Guided Surgery",
-        "Implant Bridges",
+        "Titanium Post Placement (Surgical)",
+        "Osseointegration Monitoring",
+        "Custom Crown Fabrication",
+        "Bone Grafting (if needed)",
+        "Lifetime Durability & Comfort",
       ],
       stats: "98% Success Rate | 20+ Years Longevity",
     },
     {
       title: "Painless Root Canal",
       image:
-        "https://images.unsplash.com/photo-1629904853893-c2c8984d4aab?auto=format&fit=crop&w=1200&q=60",
+        "https://images.pexels.com/photos/3845624/pexels-photo-3845624.jpeg?auto=compress&cs=tinysrgb&w=1200",
       description:
-        "Modern rotary technology and digital anesthesia make RCT smooth, accurate, and nearly painless.",
+        "Save your natural tooth with our advanced, painless root canal therapy using rotary instruments and digital imaging.",
       points: [
-        "Digital Anesthesia",
-        "Rotary Endodontics",
-        "Single-Sitting RCT",
-        "Post & Core",
+        "Digital Diagnosis & X-Ray Analysis",
+        "Deep Infection Removal",
+        "Rotary Cleaning for Precision",
+        "Biocompatible Filling & Sealing",
+        "Protective Crown Placement",
       ],
-      stats: "90% Faster Recovery | Zero Pain",
+      stats: "90% Tooth Retention | Pain-Free Procedure",
     },
     {
       title: "Teeth Cleaning & Whitening",
       image:
-        "https://images.unsplash.com/photo-1598257006462-9f1e8700f02c?auto=format&fit=crop&w=1200&q=60",
+        "https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1200",
       description:
-        "Clinic-grade teeth whitening combined with deep cleaning for instant brightness.",
+        "Maintain oral hygiene and brighten your smile with our professional cleaning and whitening services.",
       points: [
-        "Air Polishing",
-        "Ultrasonic Scaling",
-        "LED Whitening",
-        "Stain Removal",
+        "Plaque & Tartar Removal (Scaling)",
+        "Ultrasonic Cleaning Technology",
+        "Air Polishing for Stain Removal",
+        "Fluoride Treatment for Protection",
+        "Clinical LED Teeth Whitening",
       ],
-      stats: "Up to 8 Shades Whiter | Instant Results",
+      stats: "Fresh Breath | Whiter Smile",
     },
     {
       title: "Preventive Dentistry",
       image:
-        "https://images.unsplash.com/photo-1629904987451-df190da5ead8?auto=format&fit=crop&w=1200&q=60",
+        "https://images.pexels.com/photos/3845623/pexels-photo-3845623.jpeg?auto=compress&cs=tinysrgb&w=1200",
       description:
-        "Preventive dentistry focuses on avoiding dental problems before they develop.",
+        "Proactive care to maintain healthy teeth and gums, preventing future dental issues before they arise.",
       points: [
-        "Digital X-Rays",
+        "Comprehensive Oral Exams",
+        "Digital X-Rays & Diagnostics",
         "Oral Cancer Screening",
-        "Sealants",
-        "Fluoride Protection",
+        "Dental Sealants for Cavity Prevention",
+        "Fluoride Application & Advice",
       ],
-      stats: "40% Fewer Cavities | Early Detection",
+      stats: "Early Detection | Long-Term Health",
     },
     {
       title: "Gum Disease Treatment",
       image:
-        "https://images.unsplash.com/photo-1629904854019-639a6f807682?auto=format&fit=crop&w=1200&q=60",
+        "https://images.pexels.com/photos/3845623/pexels-photo-3845623.jpeg?auto=compress&cs=tinysrgb&w=1200",
       description:
-        "Restore gum health and stop bleeding or infection with advanced periodontal care.",
+        "Treat gum inflammation and periodontal disease to restore the foundation of your oral health.",
       points: [
+        "Deep Cleaning (Scaling & Root Planing)",
         "Laser Gum Therapy",
-        "Deep Cleaning",
-        "Periodontal Surgery",
-        "Pocket Reduction",
+        "Pocket Reduction Procedures",
+        "Antibiotic Treatment",
+        "Periodontal Maintenance Plans",
       ],
-      stats: "Health Restored | Bleeding Gone",
+      stats: "Healthy Gums | Halt Bone Loss",
     },
-
-    // ⭐ NEW DETAILED SERVICES
     {
       title: "Orthodontics (Braces & Aligners)",
       image:
-        "https://images.unsplash.com/photo-1606811971618-9e3e5a83ad13?auto=format&fit=crop&w=1200&q=60",
+        "https://images.pexels.com/photos/3845622/pexels-photo-3845622.jpeg?auto=compress&cs=tinysrgb&w=1200",
       description:
-        "Straighten teeth and enhance bite alignment with braces or invisible clear aligners.",
+        "Achieve a perfectly aligned smile with our range of orthodontic solutions for children and adults.",
       points: [
-        "Metal Braces",
-        "Ceramic Braces",
-        "Clear Aligners",
-        "Retainers",
-        "Growth Guidance",
+        "Traditional Metal Braces",
+        "Ceramic (Clear) Braces",
+        "Invisalign / Clear Aligners",
+        "Custom Retainers",
+        "Jaw Alignment Correction",
       ],
-      stats: "Perfect Alignment | Customized Treatment",
+      stats: "Perfect Alignment | Correct Bite",
     },
     {
       title: "Smile Makeover",
       image:
-        "https://images.unsplash.com/photo-1552558636-9d50c72c7f59?auto=format&fit=crop&w=1200&q=60",
+        "https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=1200",
       description:
-        "A full smile transformation with veneers, whitening, bonding, and advanced planning.",
+        "A comprehensive approach to transforming your smile, combining multiple cosmetic procedures for stunning results.",
       points: [
-        "Digital Smile Design",
-        "Veneers",
-        "Whitening",
-        "Gum Contouring",
+        "Personalized Consultation & Planning",
+        "3D Smile Simulation",
+        "Veneers & Crowns Integration",
+        "Teeth Whitening & Brightening",
+        "Gum Reshaping & Contouring",
       ],
-      stats: "Premium Smile Design | Celebrity-Level Results",
+      stats: "Life-Changing Results | Boosted Confidence",
     },
     {
       title: "Full Mouth Rehabilitation",
       image:
-        "https://images.unsplash.com/photo-1629904854100-cdea5ed1fc5a?auto=format&fit=crop&w=1200&q=60",
+        "https://images.pexels.com/photos/3845621/pexels-photo-3845621.jpeg?auto=compress&cs=tinysrgb&w=1200",
       description:
-        "A complete reconstruction of all teeth to restore chewing, bite, and aesthetics.",
+        "Restore full function and aesthetics to your mouth with a customized plan for complex dental needs.",
       points: [
-        "Implants",
-        "Crowns & Bridges",
-        "Bite Correction",
-        "Jaw Alignment",
+        "Comprehensive Treatment Planning",
+        "Implant-Supported Dentures",
+        "Full Arch Bridges & Crowns",
+        "Bite Reconstruction",
+        "TMJ & Jaw Therapy",
       ],
-      stats: "Total Restoration | Multi-Stage Precision",
+      stats: "Total Function | Aesthetic Restoration",
     },
     {
       title: "Pediatric Dentistry",
       image:
-        "https://images.unsplash.com/photo-1606811971749-522d7c44c46f?auto=format&fit=crop&w=1200&q=60",
+        "https://images.pexels.com/photos/6627902/pexels-photo-6627902.jpeg?auto=compress&cs=tinysrgb&w=1200",
       description:
-        "Gentle, friendly, and fun care that helps children feel comfortable.",
+        "Specialized, gentle dental care for children in a fun and safe environment.",
       points: [
-        "Kids Checkups",
-        "Cavity Prevention",
-        "Sealants",
-        "Fluoride Therapy",
+        "First Dental Visit & Acclimatization",
+        "Oral Habit Counseling (Thumb Sucking)",
+        "Cavity Prevention & Sealants",
+        "Fluoride Varnish Application",
+        "Painless Fillings & Extractions",
       ],
-      stats: "Kid-Friendly Clinic | Zero Anxiety",
+      stats: "Child-Friendly | Anxiety-Free",
     },
     {
       title: "Oral Surgery",
       image:
-        "https://images.unsplash.com/photo-1629909615342-17c3ad8d1f84?auto=format&fit=crop&w=1200&q=60",
+        "https://images.pexels.com/photos/3845625/pexels-photo-3845625.jpeg?auto=compress&cs=tinysrgb&w=1200",
       description:
-        "Safe and advanced surgical care for wisdom teeth, cysts, and oral conditions.",
+        "Expert surgical procedures for wisdom teeth, extractions, and other complex oral conditions.",
       points: [
-        "Wisdom Tooth Removal",
-        "Biopsy",
-        "Cyst Removal",
-        "Minor Surgeries",
+        "Wisdom Tooth Extraction",
+        "Impacted Tooth Exposure",
+        "Dental Bone Grafts",
+        "Soft Tissue Biopsy",
+        "Pre-Prosthetic Surgery",
       ],
-      stats: "Safe Procedures | Fast Recovery",
+      stats: "Safe | Effective | Quick Recovery",
     },
     {
       title: "Emergency Dentistry",
       image:
-        "https://images.unsplash.com/photo-1629904854019-639a6f807682?auto=format&fit=crop&w=1200&q=60",
+        "https://images.pexels.com/photos/3845626/pexels-photo-3845626.jpeg?auto=compress&cs=tinysrgb&w=1200",
       description:
-        "Immediate care for dental swelling, pain, bleeding, and trauma.",
+        "Immediate dental care for accidents, severe pain, or sudden dental issues.",
       points: [
-        "Immediate Pain Relief",
-        "Broken Tooth Fix",
-        "Infection Control",
-        "Swelling Management",
+        "Acute Toothache Relief",
+        "Broken or Chipped Tooth Repair",
+        "Knocked-Out Tooth Management",
+        "Lost Filling or Crown Replacement",
+        "Abscess & Infection Treatment",
       ],
-      stats: "24/7 Support | Fast Relief",
+      stats: "24/7 Availability | Immediate Relief",
     },
   ];
 
@@ -330,10 +337,10 @@ export default function FullServicePage() {
   const Modal = () =>
     openModal && selectedService ? (
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-        <div className="bg-white rounded-3xl max-w-3xl w-full shadow-xl overflow-hidden relative">
+        <div className="bg-white rounded-3xl max-w-3xl w-full shadow-xl overflow-hidden relative animate-in fade-in zoom-in duration-300">
           <button
             onClick={() => setOpenModal(false)}
-            className="absolute top-4 right-4 bg-black/10 hover:bg-black/20 text-black rounded-full w-10 h-10 flex items-center justify-center text-xl"
+            className="absolute top-4 right-4 bg-black/10 hover:bg-black/20 text-black rounded-full w-10 h-10 flex items-center justify-center text-xl transition-colors"
           >
             ✕
           </button>
@@ -349,22 +356,44 @@ export default function FullServicePage() {
           </div>
 
           {/* IMAGE */}
-          <img
-            src={selectedService.image}
-            alt={selectedService.title}
-            className="w-full h-80 object-cover"
-          />
+          <div className="w-full h-64 overflow-hidden relative">
+            <img
+              src={selectedService.image}
+              alt={selectedService.title}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute bottom-0 left-0 w-full h-1/2 bg-linear-to-t from-black/50 to-transparent"></div>
+            <div className="absolute bottom-4 left-6 text-white font-bold drop-shadow-md">
+              {selectedService.stats && (
+                <div className="flex items-center gap-2">
+                  <Award className="w-5 h-5 text-yellow-400" />
+                  <span>{selectedService.stats}</span>
+                </div>
+              )}
+            </div>
+          </div>
 
           {/* POINTS */}
-          <div className="p-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="p-8 grid grid-cols-1 sm:grid-cols-2 gap-4 bg-gray-50">
             {selectedService.points.map((point, idx) => (
-              <div key={idx} className="flex items-start gap-2">
-                <div className="w-6 h-6 bg-[#fbf7e3] rounded-full flex items-center justify-center">
-                  <BadgeCheck className="w-3 h-3 text-black" />
+              <div key={idx} className="flex items-start gap-3">
+                <div className="w-6 h-6 bg-[#fbf7e3] rounded-full flex items-center justify-center mt-0.5 shrink-0">
+                  <BadgeCheck className="w-3.5 h-3.5 text-black" />
                 </div>
-                <p className="text-black/80 font-medium">{point}</p>
+                <p className="text-black/80 font-medium leading-relaxed">
+                  {point}
+                </p>
               </div>
             ))}
+          </div>
+
+          <div className="p-6 bg-white border-t border-border flex justify-end">
+            <Button
+              onClick={() => setOpenModal(false)}
+              className="bg-black text-white hover:bg-black/80 rounded-full px-6"
+            >
+              Close Details
+            </Button>
           </div>
         </div>
       </div>
@@ -375,6 +404,18 @@ export default function FullServicePage() {
   //     name: "Sarah Johnson",
   //     treatment: "Smile Makeover",
   //     text: "After years of hiding my smile, the cosmetic dentistry transformed my confidence. The digital preview showed exactly what to expect, and the results were even better!",
+  //     rating: 5,
+  //   },
+  //   {
+  //     name: "Michael Chen",
+  //     treatment: "Dental Implants",
+  //     text: "The implant process was seamless and virtually painless. The team explained every step, and now I can eat anything without worry. Life-changing experience!",
+  //     rating: 5,
+  //   },
+  //   {
+  //     name: "The Rodriguez Family",
+  //     treatment: "Family Dentistry",
+  //     text: "From our toddler's first visit to grandma's dentures, this practice handles all our family's needs with exceptional care and professionalism.",
   //     rating: 5,
   //   },
   //   {
@@ -559,7 +600,7 @@ export default function FullServicePage() {
                     </div>
                   </div>
 
-                  <div className="space-y-4 flex-grow">
+                  <div className="space-y-4 grow">
                     <h3 className="text-2xl font-bold text-black">
                       {service.title}
                     </h3>
@@ -574,7 +615,7 @@ export default function FullServicePage() {
                           className="flex items-center gap-2 text-sm"
                         >
                           <div className="w-5 h-5 rounded-full bg-black/5 flex items-center justify-center">
-                            <BadgeCheck className="w-3 h-3 text-black flex-shrink-0" />
+                            <BadgeCheck className="w-3 h-3 text-black shrink-0" />
                           </div>
                           <span className="text-black/80 font-semibold">
                             {feature}

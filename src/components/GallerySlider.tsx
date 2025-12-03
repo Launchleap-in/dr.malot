@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function GalleryPage() {
   const cases = [
     {
-      title: "Teeth Whitening",
+      title: "Teeth Implant",
       before: "/slider/b1.png",
       after: "/slider/b2.png",
     },

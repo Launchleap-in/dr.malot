@@ -102,7 +102,7 @@ export default function DentistHome() {
           >
             {/* Big Image */}
             <img
-              src="/di.png"
+              src="/hero.png"
               alt="Happy Patient"
               className="h-full w-auto object-cover object-bottom lg:object-bottom-right drop-shadow-2xl"
             />
@@ -113,7 +113,7 @@ export default function DentistHome() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.8 }}
-            className="absolute top-auto bottom-24 left-4 sm:top-1/3 sm:bottom-auto sm:right-16 sm:left-auto bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50 max-w-[180px]"
+            className="absolute top-auto bottom-16 left-4 sm:top-[60%] sm:bottom-auto sm:right-16 sm:left-auto bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50 max-w-[180px]"
           >
             <div className="flex items-center gap-3 mb-2">
               <div className="p-2 bg-mint rounded-full">
@@ -133,7 +133,7 @@ export default function DentistHome() {
             transition={{ delay: 0.9 }}
             className="absolute bottom-4 right-4 sm:bottom-32 sm:left-16 sm:right-auto bg-black text-white p-4 sm:p-5 rounded-2xl shadow-xl max-w-[160px] sm:max-w-[200px] z-20"
           >
-            <div className="text-2xl sm:text-3xl font-bold mb-1">15+</div>
+            <div className="text-2xl sm:text-3xl font-bold mb-1">25+</div>
             <div className="text-sm text-white/70">
               Years of Excellence in Dental Care
             </div>
@@ -141,9 +141,9 @@ export default function DentistHome() {
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 right-8 sm:bottom-12 sm:right-12 flex flex-col items-center gap-4 z-20 mix-blend-darken">
-            <span className="text-xs font-medium uppercase tracking-widest -rotate-90 origin-center translate-y-8">
+            {/* <span className="text-xs font-medium uppercase tracking-widest -rotate-90 origin-center translate-y-8">
               Scroll to explore
-            </span>
+            </span> */}
             <div className="w-12 h-12 rounded-full border border-black/20 flex items-center justify-center mt-16 animate-bounce bg-white/20 backdrop-blur-sm">
               <ArrowDown className="w-5 h-5 text-black" />
             </div>
