@@ -11,8 +11,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Malot Dental Clinic",
-  description: "Expert dental care with a personal touch.",
+  title: {
+    default:
+      "Dr. Malot Dental Clinic | Expert Dental Care, Cosmetic Dentistry & Smile Transformations",
+    template: "%s | Dr. Malot Dental Clinic",
+  },
+  description:
+    "Dr. Malot Dental Clinic offers advanced dental services including cosmetic dentistry, dental implants, root canal treatments, orthodontics, teeth whitening, and smile design. Modern technology for painless, reliable dental care.",
 };
 
 export default function RootLayout({

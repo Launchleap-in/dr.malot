@@ -63,8 +63,16 @@ export default function DentistHome() {
             className="mt-12 flex flex-wrap gap-4 items-center"
           >
             <Link
-              className="bg-black text-white px-8 py-4 rounded-full text-base sm:text-lg font-bold hover:scale-105 transition-transform duration-300 cursor-pointer shadow-xl shadow-black/10 w-full sm:w-auto"
-              href={"/contact#ContactForm"}
+              href="/contact#ContactForm"
+              className="
+    bg-black text-white font-bold cursor-pointer
+    rounded-full shadow-xl shadow-black/10
+    transition-all duration-300 hover:scale-105
+    flex items-center justify-center
+    w-full sm:w-auto
+    px-6 py-3 sm:px-8 sm:py-4
+    text-sm sm:text-base md:text-lg
+  "
             >
               Book appointment
             </Link>
