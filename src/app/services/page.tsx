@@ -148,182 +148,192 @@ export default function FullServicePage() {
     {
       title: "Cosmetic Dentistry",
       image:
-        "https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80",
       description:
-        "Enhance your smile's aesthetics with our advanced cosmetic treatments, designed to improve color, shape, and overall appearance.",
+        "Transform your smile with our comprehensive cosmetic dentistry solutions. We combine artistry with advanced dental technology to create natural-looking, beautiful smiles. Our cosmetic treatments address discoloration, misalignment, gaps, chips, and other aesthetic concerns. Each treatment plan is personalized to match your facial features, skin tone, and personal preferences. Using state-of-the-art digital smile design technology, we can preview your new smile before any procedure begins, ensuring you're completely satisfied with the planned results.",
       points: [
-        "Digital Smile Design & Consultation",
-        "Porcelain Veneers for Flawless Looks",
-        "Composite Bonding for Minor Corrections",
-        "Laser Teeth Whitening for Brightness",
-        "Gum Contouring & Reshaping",
+        "Digital Smile Design & Virtual Preview - See your new smile before treatment",
+        "Premium Porcelain Veneers - Ultra-thin, natural-looking ceramic shells",
+        "Composite Bonding - Quick fixes for chips, gaps, and minor imperfections",
+        "Professional Laser Teeth Whitening - Safe brightening up to 8 shades",
+        "Gum Contouring & Reshaping - Create balanced, symmetrical gum lines",
       ],
-      stats: "95% Smiles Improved | 500+ Cases",
+      stats: "95% Patient Satisfaction | 500+ Successful Smile Transformations",
     },
     {
       title: "Dental Implants",
       image:
-        "https://images.pexels.com/photos/3845621/pexels-photo-3845621.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80",
       description:
-        "Restore missing teeth with durable, natural-looking implants that function and feel just like your own.",
+        "Experience the gold standard in tooth replacement with dental implants. Our implants are made from medical-grade titanium that naturally fuses with your jawbone, providing a permanent, stable foundation for replacement teeth. Unlike dentures or bridges, implants preserve your jawbone density and prevent facial structure changes. They look, feel, and function exactly like natural teeth, allowing you to eat, speak, and smile with complete confidence. Our experienced implantologists use 3D imaging and computer-guided surgery for precise placement with minimal discomfort and faster healing.",
       points: [
-        "Titanium Post Placement (Surgical)",
-        "Osseointegration Monitoring",
-        "Custom Crown Fabrication",
-        "Bone Grafting (if needed)",
-        "Lifetime Durability & Comfort",
+        "Premium Titanium Implant Posts - Biocompatible, corrosion-resistant material",
+        "3D CT Scan Planning - Precise positioning for optimal results",
+        "Minimally Invasive Surgery - Advanced techniques for faster recovery",
+        "Custom Ceramic Crowns - Hand-crafted to match your natural teeth perfectly",
+        "Bone Grafting Solutions - Rebuild bone density when needed",
       ],
-      stats: "98% Success Rate | 20+ Years Longevity",
+      stats:
+        "98% Success Rate | 25+ Years Average Lifespan | 1000+ Implants Placed",
     },
     {
       title: "Painless Root Canal",
       image:
-        "https://images.pexels.com/photos/3845624/pexels-photo-3845624.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
       description:
-        "Save your natural tooth with our advanced, painless root canal therapy using rotary instruments and digital imaging.",
+        "Save your natural tooth with our advanced, completely painless root canal therapy. Gone are the days of painful, lengthy procedures. We use state-of-the-art rotary endodontic systems that clean and shape root canals more efficiently than traditional methods. Digital anesthesia delivery systems ensure you feel no discomfort during treatment. Our microscope-assisted approach allows us to see inside the tooth canal system with precision, ensuring complete infection removal. Most treatments are completed in a single visit, and you can return to your normal activities immediately after.",
       points: [
-        "Digital Diagnosis & X-Ray Analysis",
-        "Deep Infection Removal",
-        "Rotary Cleaning for Precision",
-        "Biocompatible Filling & Sealing",
-        "Protective Crown Placement",
+        "Digital X-Ray Diagnosis - Pinpoint infection with 90% less radiation",
+        "Advanced Rotary Instrumentation - Faster, more thorough cleaning",
+        "Microscope-Enhanced Precision - See and treat even the tiniest canals",
+        "Biocompatible Gutta-Percha Filling - Natural rubber sealing material",
+        "Same-Day Ceramic Crown Option - Complete restoration in one visit",
       ],
-      stats: "90% Tooth Retention | Pain-Free Procedure",
+      stats:
+        "95% Tooth Salvation Rate | Pain-Free Experience | Single Visit Possible",
     },
     {
       title: "Teeth Cleaning & Whitening",
       image:
-        "https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.unsplash.com/photo-1609840114035-3c981960afdd?w=800&q=80",
       description:
-        "Maintain oral hygiene and brighten your smile with our professional cleaning and whitening services.",
+        "Maintain optimal oral health and achieve a radiant smile with our professional cleaning and whitening services. Regular deep cleaning removes hardened plaque (tartar) that home brushing cannot eliminate, preventing gum disease and cavities. Our ultrasonic scaling technology makes the process comfortable and highly effective. Following cleaning, our advanced LED-activated whitening system can brighten your teeth up to 6-8 shades in just one hour. Unlike over-the-counter products, our professional treatments are safe for enamel and provide longer-lasting results without sensitivity.",
       points: [
-        "Plaque & Tartar Removal (Scaling)",
-        "Ultrasonic Cleaning Technology",
-        "Air Polishing for Stain Removal",
-        "Fluoride Treatment for Protection",
-        "Clinical LED Teeth Whitening",
+        "Ultrasonic Scaling Technology - Gentle removal of tartar and plaque buildup",
+        "Air Polishing System - Remove surface stains from coffee, tea, and tobacco",
+        "Sub-gingival Deep Cleaning - Reach below gum line for thorough hygiene",
+        "Fluoride Varnish Treatment - Strengthen enamel and prevent decay",
+        "Clinical LED Teeth Whitening - Professional-grade brightening in 60 minutes",
       ],
-      stats: "Fresh Breath | Whiter Smile",
+      stats:
+        "Fresh Breath Guaranteed | Whiter Smile in One Session | 6-Month Protection",
     },
     {
       title: "Preventive Dentistry",
       image:
-        "https://images.pexels.com/photos/3845623/pexels-photo-3845623.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80",
       description:
-        "Proactive care to maintain healthy teeth and gums, preventing future dental issues before they arise.",
+        "Prevention is the cornerstone of excellent dental health. Our comprehensive preventive program focuses on early detection and intervention to avoid costly, painful dental problems in the future. Through regular check-ups, we monitor your oral health, screen for oral cancer, assess gum condition, and identify cavities before they become serious. We use low-radiation digital X-rays to see problems invisible to the naked eye. Our preventive treatments include dental sealants that protect molars from decay, fluoride applications that strengthen enamel, and personalized oral hygiene education to help you maintain your smile between visits.",
       points: [
-        "Comprehensive Oral Exams",
-        "Digital X-Rays & Diagnostics",
-        "Oral Cancer Screening",
-        "Dental Sealants for Cavity Prevention",
-        "Fluoride Application & Advice",
+        "Comprehensive Oral Health Examination - Complete assessment every 6 months",
+        "Digital X-Rays with 90% Less Radiation - Safe, detailed imaging technology",
+        "Oral Cancer Screening - Early detection saves lives",
+        "Dental Sealants for Children & Adults - Shield vulnerable chewing surfaces",
+        "Customized Home Care Plans - Personalized brushing and flossing guidance",
       ],
-      stats: "Early Detection | Long-Term Health",
+      stats:
+        "Early Problem Detection | Reduce Treatment Costs by 60% | Lifelong Healthy Teeth",
     },
     {
       title: "Gum Disease Treatment",
       image:
-        "https://images.pexels.com/photos/3845623/pexels-photo-3845623.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80",
       description:
-        "Treat gum inflammation and periodontal disease to restore the foundation of your oral health.",
+        "Combat periodontal disease with our advanced gum therapy treatments. Gum disease affects nearly 50% of adults and is the leading cause of tooth loss, yet it's completely preventable and treatable. We offer non-surgical treatments like scaling and root planing to remove bacteria below the gum line, as well as cutting-edge laser therapy that targets infection while promoting tissue regeneration. Our laser treatment is virtually painless, requires no scalpels or sutures, and has minimal recovery time. For advanced cases, we provide surgical options including gum grafts and pocket reduction procedures to restore your gum health and protect your teeth.",
       points: [
-        "Deep Cleaning (Scaling & Root Planing)",
-        "Laser Gum Therapy",
-        "Pocket Reduction Procedures",
-        "Antibiotic Treatment",
-        "Periodontal Maintenance Plans",
+        "Deep Scaling & Root Planing - Remove bacteria from below gum line",
+        "Laser Periodontal Therapy (LANAP) - Painless, minimally invasive treatment",
+        "Pocket Reduction Surgery - Eliminate deep bacterial hiding spots",
+        "Antibiotic Therapy - Target resistant infections effectively",
+        "Ongoing Periodontal Maintenance - Prevent disease recurrence",
       ],
-      stats: "Healthy Gums | Halt Bone Loss",
+      stats:
+        "Stop Gum Recession | Prevent Tooth Loss | Restore Pink, Healthy Gums",
     },
     {
       title: "Orthodontics (Braces & Aligners)",
       image:
-        "https://images.pexels.com/photos/3845622/pexels-photo-3845622.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80",
       description:
-        "Achieve a perfectly aligned smile with our range of orthodontic solutions for children and adults.",
+        "Achieve perfectly aligned teeth and a confident smile with our comprehensive orthodontic solutions. Whether you prefer traditional metal braces, discreet ceramic braces, or virtually invisible clear aligners, we have the right option for you. Straight teeth aren't just about appearance—proper alignment improves bite function, reduces jaw pain, prevents premature tooth wear, and makes cleaning easier. We treat patients of all ages, from children getting early intervention to adults finally achieving the smile they've always wanted. Our digital treatment planning shows you the expected results before you begin, and regular progress monitoring ensures you stay on track.",
       points: [
-        "Traditional Metal Braces",
-        "Ceramic (Clear) Braces",
-        "Invisalign / Clear Aligners",
-        "Custom Retainers",
-        "Jaw Alignment Correction",
+        "Traditional Metal Braces - Proven, effective for complex cases",
+        "Ceramic (Clear) Braces - Tooth-colored brackets for subtle appearance",
+        "Invisalign Clear Aligners - Removable, nearly invisible option",
+        "Custom Retainers - Maintain your beautiful new alignment",
+        "Bite Correction & TMJ Relief - Address functional jaw problems",
       ],
-      stats: "Perfect Alignment | Correct Bite",
+      stats:
+        "Perfect Alignment Achieved | Correct Overbite/Underbite | 12-24 Month Average Treatment",
     },
     {
       title: "Smile Makeover",
       image:
-        "https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80",
       description:
-        "A comprehensive approach to transforming your smile, combining multiple cosmetic procedures for stunning results.",
+        "Experience a complete smile transformation with our comprehensive smile makeover service. This customized treatment combines multiple cosmetic procedures—veneers, crowns, whitening, bonding, and gum reshaping—to address all aspects of your smile aesthetics. We start with a detailed consultation to understand your goals and concerns. Using advanced 3D digital smile design technology, we create a virtual preview of your new smile, allowing you to see and approve the results before any treatment begins. Our artistic approach considers your facial proportions, skin tone, personality, and preferences to create a natural-looking smile that enhances your unique beauty.",
       points: [
-        "Personalized Consultation & Planning",
-        "3D Smile Simulation",
-        "Veneers & Crowns Integration",
-        "Teeth Whitening & Brightening",
-        "Gum Reshaping & Contouring",
+        "Personalized Smile Consultation - Discuss your vision and concerns",
+        "3D Digital Smile Simulation - Preview your transformation before treatment",
+        "Multi-Procedure Coordination - Combine veneers, crowns, whitening seamlessly",
+        "Color & Shape Customization - Match your natural features perfectly",
+        "Gum Line Refinement - Frame your teeth beautifully",
       ],
-      stats: "Life-Changing Results | Boosted Confidence",
+      stats:
+        "Life-Changing Confidence Boost | 95% Patient Satisfaction | Hollywood Smile Results",
     },
     {
       title: "Full Mouth Rehabilitation",
       image:
-        "https://images.pexels.com/photos/3845621/pexels-photo-3845621.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80",
       description:
-        "Restore full function and aesthetics to your mouth with a customized plan for complex dental needs.",
+        "Restore complete oral function and aesthetics with full mouth rehabilitation. This comprehensive treatment is designed for patients with extensive dental damage from decay, trauma, worn teeth, or severe gum disease. We rebuild your entire bite using a combination of dental implants, crowns, bridges, and dentures, customized to your specific needs. The process begins with detailed diagnosis including 3D scans, bite analysis, and jaw relationship assessment. We develop a phased treatment plan that addresses both functional problems (chewing, speaking, jaw pain) and aesthetic concerns. The result is a fully functional, beautiful smile that dramatically improves your quality of life.",
       points: [
-        "Comprehensive Treatment Planning",
-        "Implant-Supported Dentures",
-        "Full Arch Bridges & Crowns",
-        "Bite Reconstruction",
-        "TMJ & Jaw Therapy",
+        "Comprehensive Diagnosis & Planning - 3D imaging and bite analysis",
+        "Implant-Supported Full Arch Restoration - Permanent, stable teeth",
+        "Custom Bridges & Crowns - Natural-looking, long-lasting restorations",
+        "Bite Reconstruction - Restore proper jaw alignment and function",
+        "TMJ Disorder Treatment - Eliminate jaw pain and clicking",
       ],
-      stats: "Total Function | Aesthetic Restoration",
+      stats:
+        "Complete Oral Function Restored | Eat Anything Confidently | 10-20 Year Longevity",
     },
     {
       title: "Pediatric Dentistry",
       image:
-        "https://images.pexels.com/photos/6627902/pexels-photo-6627902.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
       description:
-        "Specialized, gentle dental care for children in a fun and safe environment.",
+        "Give your child the gift of lifelong dental health with our specialized pediatric dentistry services. We create a warm, friendly, anxiety-free environment where children feel comfortable and safe. Our pediatric dentists are specially trained to handle the unique dental needs of growing smiles, from teething babies to teenagers. We focus on prevention through education, teaching children proper brushing and flossing techniques in fun, engaging ways. Early dental visits help children develop positive associations with dental care, preventing anxiety later in life. We provide gentle treatments for cavities, protective sealants, fluoride applications, and guidance on thumb-sucking and pacifier habits.",
       points: [
-        "First Dental Visit & Acclimatization",
-        "Oral Habit Counseling (Thumb Sucking)",
-        "Cavity Prevention & Sealants",
-        "Fluoride Varnish Application",
-        "Painless Fillings & Extractions",
+        "Child-Friendly Environment - Colorful, welcoming clinic design",
+        "Gentle First Visit Experience - Build trust and comfort gradually",
+        "Habit Counseling - Address thumb-sucking, bottle-feeding issues",
+        "Cavity Prevention Program - Sealants and fluoride protection",
+        "Painless Pediatric Treatments - Specialized gentle techniques",
       ],
-      stats: "Child-Friendly | Anxiety-Free",
+      stats:
+        "Anxiety-Free Visits | 99% Cavity Prevention Success | Happy, Healthy Smiles",
     },
     {
       title: "Oral Surgery",
       image:
-        "https://images.pexels.com/photos/3845625/pexels-photo-3845625.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&q=80",
       description:
-        "Expert surgical procedures for wisdom teeth, extractions, and other complex oral conditions.",
+        "Receive expert surgical care for complex dental conditions requiring extraction or oral procedures. Our oral surgeons are highly trained specialists who perform everything from routine wisdom tooth removal to complex jaw surgery. We use the latest surgical techniques including minimally invasive approaches that reduce discomfort and speed healing. Sedation options ensure you remain comfortable throughout your procedure. Wisdom tooth extraction is our most common surgery—impacted wisdom teeth can cause pain, infection, and damage to neighboring teeth if not removed. We also perform pre-prosthetic surgery to prepare your mouth for dentures or implants, remove cysts and tumors, and perform biopsies for diagnostic purposes.",
       points: [
-        "Wisdom Tooth Extraction",
-        "Impacted Tooth Exposure",
-        "Dental Bone Grafts",
-        "Soft Tissue Biopsy",
-        "Pre-Prosthetic Surgery",
+        "Wisdom Tooth Extraction - Remove impacted or problematic third molars",
+        "Complex Tooth Extractions - Handle difficult cases safely",
+        "Dental Bone Grafting - Rebuild jaw bone for implant placement",
+        "Soft Tissue Biopsy - Diagnose oral lesions and abnormalities",
+        "Pre-Prosthetic Surgery - Reshape jaw for better denture fit",
       ],
-      stats: "Safe | Effective | Quick Recovery",
+      stats:
+        "Minimally Invasive Techniques | Quick Recovery | Safe Sedation Options",
     },
     {
       title: "Emergency Dentistry",
       image:
-        "https://images.pexels.com/photos/3845626/pexels-photo-3845626.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80",
       description:
-        "Immediate dental care for accidents, severe pain, or sudden dental issues.",
+        "Get immediate relief from dental emergencies with our 24/7 emergency dental services. Dental emergencies can happen anytime—severe toothaches, knocked-out teeth, broken crowns, abscessed teeth, or facial trauma. Prompt treatment is crucial to save teeth, prevent infection, and relieve pain. Our emergency team is always on call to provide immediate care when you need it most. We prioritize emergency patients and often provide same-day appointments. Our goal is to stabilize your condition, eliminate pain, and prevent further damage, with follow-up treatment scheduled as needed. Don't suffer in pain—call us immediately for any dental emergency.",
       points: [
-        "Acute Toothache Relief",
-        "Broken or Chipped Tooth Repair",
-        "Knocked-Out Tooth Management",
-        "Lost Filling or Crown Replacement",
-        "Abscess & Infection Treatment",
+        "24/7 Emergency Hotline - Always available when you need help",
+        "Same-Day Emergency Appointments - Fast access to care",
+        "Severe Toothache Relief - Eliminate pain quickly and effectively",
+        "Knocked-Out Tooth Re-implantation - Time-sensitive tooth saving",
+        "Abscess & Infection Control - Prevent serious complications",
       ],
-      stats: "24/7 Availability | Immediate Relief",
+      stats: "24/7 Availability | Immediate Pain Relief | Save Your Tooth",
     },
   ];
 
@@ -331,74 +341,111 @@ export default function FullServicePage() {
     { number: "10,000+", label: "Happy Patients", icon: Users },
     { number: "15+", label: "Years Experience", icon: Award },
     { number: "98%", label: "Success Rate", icon: ShieldCheck },
-    { number: "24/7", label: "Emergency Care", icon: Clock },
+    // { number: "24/7", label: "Emergency Care", icon: Clock },
   ];
 
   const Modal = () =>
     openModal && selectedService ? (
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-        <div className="bg-white rounded-3xl max-w-3xl w-full shadow-xl overflow-hidden relative animate-in fade-in zoom-in duration-300">
+      <div
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-3 sm:p-4 md:p-6 overflow-y-auto"
+        onClick={() => setOpenModal(false)}
+      >
+        <div
+          className="bg-white rounded-2xl sm:rounded-3xl max-w-4xl w-full shadow-2xl overflow-hidden relative animate-in fade-in zoom-in duration-300 my-4 sm:my-8 max-h-[95vh] overflow-y-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* Close Button */}
           <button
             onClick={() => setOpenModal(false)}
-            className="absolute top-4 right-4 bg-black/10 hover:bg-black/20 text-black rounded-full w-10 h-10 flex items-center justify-center text-xl transition-colors"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/95 hover:bg-white text-black rounded-full w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-lg sm:text-xl font-semibold transition-all hover:scale-110 shadow-lg z-10 backdrop-blur-sm"
+            aria-label="Close modal"
           >
             ✕
           </button>
 
           {/* HEADER */}
-          <div className="p-8 border-b border-border">
-            <h2 className="text-3xl font-bold mb-3 text-black">
+          <div className="px-4 sm:px-6 md:px-8 pt-5 sm:pt-6 md:pt-8 pb-4 sm:pb-5">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 text-black leading-tight pr-10 sm:pr-12">
               {selectedService.title}
             </h2>
-            <p className="text-black/60 font-medium">
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
               {selectedService.description}
             </p>
           </div>
 
           {/* IMAGE */}
-          <div className="w-full h-64 overflow-hidden relative">
+          <div className="w-full h-44 sm:h-56 md:h-64 lg:h-72 overflow-hidden relative">
             <img
               src={selectedService.image}
               alt={selectedService.title}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-0 left-0 w-full h-1/2 bg-linear-to-t from-black/50 to-transparent"></div>
-            <div className="absolute bottom-4 left-6 text-white font-bold drop-shadow-md">
-              {selectedService.stats && (
-                <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5 text-yellow-400" />
-                  <span>{selectedService.stats}</span>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+
+            {/* Stats Badge */}
+            {selectedService.stats && (
+              <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                <div className="bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 shadow-lg inline-flex items-center gap-2 sm:gap-2.5 max-w-full">
+                  <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-500 shrink-0" />
+                  <span className="text-xs sm:text-sm font-semibold text-gray-900 truncate">
+                    {selectedService.stats}
+                  </span>
                 </div>
-              )}
+              </div>
+            )}
+          </div>
+
+          {/* POINTS SECTION */}
+          <div className="px-4 sm:px-6 md:px-8 py-5 sm:py-6 md:py-8 bg-gray-50/50">
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-4 sm:mb-5 flex items-center gap-2">
+              <div className="w-1 h-5 sm:h-6 bg-black rounded-full"></div>
+              What We Offer
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 sm:gap-3 md:gap-4">
+              {selectedService.points.map((point, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-start gap-2.5 sm:gap-3 bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all"
+                >
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 bg-emerald-50 rounded-full flex items-center justify-center mt-0.5 shrink-0">
+                    <BadgeCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600" />
+                  </div>
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                    {point}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* POINTS */}
-          <div className="p-8 grid grid-cols-1 sm:grid-cols-2 gap-4 bg-gray-50">
-            {selectedService.points.map((point, idx) => (
-              <div key={idx} className="flex items-start gap-3">
-                <div className="w-6 h-6 bg-[#fbf7e3] rounded-full flex items-center justify-center mt-0.5 shrink-0">
-                  <BadgeCheck className="w-3.5 h-3.5 text-black" />
-                </div>
-                <p className="text-black/80 font-medium leading-relaxed">
-                  {point}
-                </p>
+          {/* FOOTER */}
+          <div className="px-4 sm:px-6 md:px-8 py-4 sm:py-5 bg-white border-t border-gray-100">
+            <div className="flex items-center justify-between flex-wrap gap-3 sm:gap-4">
+              <div className="hidden sm:flex items-center gap-2 text-xs sm:text-sm text-gray-500">
+                <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                <span>Need help? Contact us for consultation</span>
               </div>
-            ))}
-          </div>
 
-          <div className="p-6 bg-white border-t border-border flex justify-end">
-            <Button
-              onClick={() => setOpenModal(false)}
-              className="bg-black text-white hover:bg-black/80 rounded-full px-6"
-            >
-              Close Details
-            </Button>
+              <div className="flex gap-2 sm:gap-3 w-full sm:w-auto sm:ml-auto">
+                <button
+                  onClick={() => setOpenModal(false)}
+                  className="flex-1 sm:flex-none px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 border border-gray-300 text-gray-700 hover:bg-gray-50 rounded-full text-xs sm:text-sm font-medium transition-all"
+                >
+                  Close
+                </button>
+                <a
+                  href="/contact#ContactForm"
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 bg-black text-white hover:bg-gray-900 rounded-full text-xs sm:text-sm font-semibold shadow-md hover:shadow-lg transition-all"
+                >
+                  Book Now
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     ) : null;
-
   // const testimonials = [
   //   {
   //     name: "Sarah Johnson",
@@ -508,7 +555,7 @@ export default function FullServicePage() {
             backgroundSize: "50px 50px",
           }}
         />
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
