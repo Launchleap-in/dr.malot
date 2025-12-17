@@ -19,6 +19,7 @@ import {
   Phone,
   MapPin,
   ChevronRight,
+  Hospital,
 } from "lucide-react";
 import TestimonialsLight from "@/src/components/TestiLight";
 import { Button } from "@/src/components/ui/button";
@@ -179,7 +180,7 @@ export default function FullServicePage() {
     {
       title: "Painless Root Canal",
       image:
-        "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
+        "https://images.unsplash.com/photo-1593022356769-11f762e25ed9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9vdCUyMGNhbmFsfGVufDB8fDB8fHww",
       description:
         "Save your natural tooth with our advanced, completely painless root canal therapy. Gone are the days of painful, lengthy procedures. We use state-of-the-art rotary endodontic systems that clean and shape root canals more efficiently than traditional methods. Digital anesthesia delivery systems ensure you feel no discomfort during treatment. Our microscope-assisted approach allows us to see inside the tooth canal system with precision, ensuring complete infection removal. Most treatments are completed in a single visit, and you can return to your normal activities immediately after.",
       points: [
@@ -195,7 +196,7 @@ export default function FullServicePage() {
     {
       title: "Teeth Cleaning & Whitening",
       image:
-        "https://images.unsplash.com/photo-1609840114035-3c981960afdd?w=800&q=80",
+        "https://images.unsplash.com/photo-1581584731241-c134a1afe9a0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGVldGglMjBjbGVhbmluZ3xlbnwwfHwwfHx8MA%3D%3D",
       description:
         "Maintain optimal oral health and achieve a radiant smile with our professional cleaning and whitening services. Regular deep cleaning removes hardened plaque (tartar) that home brushing cannot eliminate, preventing gum disease and cavities. Our ultrasonic scaling technology makes the process comfortable and highly effective. Following cleaning, our advanced LED-activated whitening system can brighten your teeth up to 6-8 shades in just one hour. Unlike over-the-counter products, our professional treatments are safe for enamel and provide longer-lasting results without sensitivity.",
       points: [
@@ -227,7 +228,7 @@ export default function FullServicePage() {
     {
       title: "Gum Disease Treatment",
       image:
-        "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80",
+        "https://images.unsplash.com/photo-1660732205525-eb180e4d29f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3VtJTIwZGlzZWFzZXxlbnwwfHwwfHx8MA%3D%3D  ",
       description:
         "Combat periodontal disease with our advanced gum therapy treatments. Gum disease affects nearly 50% of adults and is the leading cause of tooth loss, yet it's completely preventable and treatable. We offer non-surgical treatments like scaling and root planing to remove bacteria below the gum line, as well as cutting-edge laser therapy that targets infection while promoting tissue regeneration. Our laser treatment is virtually painless, requires no scalpels or sutures, and has minimal recovery time. For advanced cases, we provide surgical options including gum grafts and pocket reduction procedures to restore your gum health and protect your teeth.",
       points: [
@@ -243,7 +244,7 @@ export default function FullServicePage() {
     {
       title: "Orthodontics (Braces & Aligners)",
       image:
-        "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80",
+        "https://images.unsplash.com/photo-1720685193964-4529228a33c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8T3J0aG9kb250aWNzfGVufDB8fDB8fHww",
       description:
         "Achieve perfectly aligned teeth and a confident smile with our comprehensive orthodontic solutions. Whether you prefer traditional metal braces, discreet ceramic braces, or virtually invisible clear aligners, we have the right option for you. Straight teeth aren't just about appearance—proper alignment improves bite function, reduces jaw pain, prevents premature tooth wear, and makes cleaning easier. We treat patients of all ages, from children getting early intervention to adults finally achieving the smile they've always wanted. Our digital treatment planning shows you the expected results before you begin, and regular progress monitoring ensures you stay on track.",
       points: [
@@ -275,7 +276,7 @@ export default function FullServicePage() {
     {
       title: "Full Mouth Rehabilitation",
       image:
-        "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80",
+        "https://images.unsplash.com/photo-1655807946138-811bb2340d34?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RnVsbCUyME1vdXRoJTIwUmVoYWJpbGl0YXRpb258ZW58MHx8MHx8fDA%3D",
       description:
         "Restore complete oral function and aesthetics with full mouth rehabilitation. This comprehensive treatment is designed for patients with extensive dental damage from decay, trauma, worn teeth, or severe gum disease. We rebuild your entire bite using a combination of dental implants, crowns, bridges, and dentures, customized to your specific needs. The process begins with detailed diagnosis including 3D scans, bite analysis, and jaw relationship assessment. We develop a phased treatment plan that addresses both functional problems (chewing, speaking, jaw pain) and aesthetic concerns. The result is a fully functional, beautiful smile that dramatically improves your quality of life.",
       points: [
@@ -291,7 +292,7 @@ export default function FullServicePage() {
     {
       title: "Pediatric Dentistry",
       image:
-        "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
+        "https://plus.unsplash.com/premium_photo-1681966964991-c91687dc735f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHBlZGlhdHJpYyUyMGRlbnRpc3R8ZW58MHx8MHx8fDA%3D",
       description:
         "Give your child the gift of lifelong dental health with our specialized pediatric dentistry services. We create a warm, friendly, anxiety-free environment where children feel comfortable and safe. Our pediatric dentists are specially trained to handle the unique dental needs of growing smiles, from teething babies to teenagers. We focus on prevention through education, teaching children proper brushing and flossing techniques in fun, engaging ways. Early dental visits help children develop positive associations with dental care, preventing anxiety later in life. We provide gentle treatments for cavities, protective sealants, fluoride applications, and guidance on thumb-sucking and pacifier habits.",
       points: [
@@ -307,7 +308,7 @@ export default function FullServicePage() {
     {
       title: "Oral Surgery",
       image:
-        "https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&q=80",
+        "https://plus.unsplash.com/premium_photo-1677174625096-b22c9bfdabd5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVudGFsJTIwc3VyZ2VyeXxlbnwwfHwwfHx8MA%3D%3D",
       description:
         "Receive expert surgical care for complex dental conditions requiring extraction or oral procedures. Our oral surgeons are highly trained specialists who perform everything from routine wisdom tooth removal to complex jaw surgery. We use the latest surgical techniques including minimally invasive approaches that reduce discomfort and speed healing. Sedation options ensure you remain comfortable throughout your procedure. Wisdom tooth extraction is our most common surgery—impacted wisdom teeth can cause pain, infection, and damage to neighboring teeth if not removed. We also perform pre-prosthetic surgery to prepare your mouth for dentures or implants, remove cysts and tumors, and perform biopsies for diagnostic purposes.",
       points: [
@@ -323,7 +324,7 @@ export default function FullServicePage() {
     {
       title: "Emergency Dentistry",
       image:
-        "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80",
+        "https://images.unsplash.com/photo-1653508310729-7d6d2e2fd6c9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fEVtZXJnZW5jeSUyMERlbnRpc3RyeXxlbnwwfHwwfHx8MA%3D%3D",
       description:
         "Get immediate relief from dental emergencies with our 24/7 emergency dental services. Dental emergencies can happen anytime—severe toothaches, knocked-out teeth, broken crowns, abscessed teeth, or facial trauma. Prompt treatment is crucial to save teeth, prevent infection, and relieve pain. Our emergency team is always on call to provide immediate care when you need it most. We prioritize emergency patients and often provide same-day appointments. Our goal is to stabilize your condition, eliminate pain, and prevent further damage, with follow-up treatment scheduled as needed. Don't suffer in pain—call us immediately for any dental emergency.",
       points: [
@@ -339,8 +340,14 @@ export default function FullServicePage() {
 
   const stats = [
     { number: "10,000+", label: "Happy Patients", icon: Users },
-    { number: "15+", label: "Years Experience", icon: Award },
+    { number: "15+", label: "Years  Experience", icon: Award },
     { number: "98%", label: "Success Rate", icon: ShieldCheck },
+    { number: "43+", label: "Total Camps", icon: Hospital },
+
+    { number: "15+", label: "specialist doctors", icon: ShieldCheck },
+
+    { number: "1500+", label: "dental implants", icon: SmilePlus },
+
     // { number: "24/7", label: "Emergency Care", icon: Clock },
   ];
 
@@ -740,7 +747,7 @@ export default function FullServicePage() {
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-sm text-white/60">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
-              <span>Mon-Fri: 8AM-7PM | Sat: 9AM-4PM</span>
+              <span>Mon-Sat: 9:30AM-8PM </span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />

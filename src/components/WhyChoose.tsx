@@ -7,6 +7,7 @@ import {
   Award,
   CheckCircle2,
 } from "lucide-react";
+import { Button } from "./ui/button";
 
 export default function WhyChooseUs() {
   const reasons = [
@@ -44,38 +45,42 @@ export default function WhyChooseUs() {
               <br />
               Our Passion
             </h2>
-               <p className="text-black/60 leading-relaxed mb-8">
-                 We deliver comprehensive dental care with a commitment to clinical excellence, patient safety, and professional service standards.
-               </p>
-               <button className="border border-black px-6 py-3 rounded-full font-bold hover:bg-black hover:text-white transition-colors mb-8 lg:mb-0">
-                 Learn More
-               </button>
-            </div>
+            <p className="text-black/60 leading-relaxed mb-8">
+              We deliver comprehensive dental care with a commitment to clinical
+              excellence, patient safety, and professional service standards.
+            </p>
+            <Button
+              variant={"default"}
+              className="border border-black px-6 py-3 rounded-full font-bold hover:bg-black hover:text-white transition-colors mb-8 lg:mb-0"
+            >
+              <a href="/about">Learn More</a>
+            </Button>
+          </div>
 
-            <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-6">
-               {reasons.map((item, i) => (
-                 <AnimatedCard
-                   key={i}
-                   delay={i * 0.1}
-                   hoverEffect={true}
-                   className={`${item.color} h-full`}
-                 >
-                    <div className="w-12 h-12 bg-white/80 backdrop-blur rounded-full flex items-center justify-center mb-6 shadow-sm">
-                      <item.icon className="w-6 h-6 text-black" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-3 text-black">{item.title}</h3>
-                      <p className="text-sm text-black/60 leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                 </AnimatedCard>
-               ))}
-            </div>
-
-         </div>
-
-       </div>
+          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {reasons.map((item, i) => (
+              <AnimatedCard
+                key={i}
+                delay={i * 0.1}
+                hoverEffect={true}
+                className={`${item.color} h-full`}
+              >
+                <div className="w-12 h-12 bg-white/80 backdrop-blur rounded-full flex items-center justify-center mb-6 shadow-sm">
+                  <item.icon className="w-6 h-6 text-black" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-3 text-black">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-black/60 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </AnimatedCard>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

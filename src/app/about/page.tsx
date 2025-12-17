@@ -1,6 +1,7 @@
 "use client";
 
 import AboutClinic from "@/src/components/About";
+import MeetOurTeam from "@/src/components/team";
 import { motion } from "framer-motion";
 import { HeartHandshake, Landmark, ShieldCheck, Sparkles } from "lucide-react";
 
@@ -122,6 +123,7 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
+      <MeetOurTeam />
 
       {/* ===== CORE VALUES ===== */}
       <section className="px-6 md:px-16 py-24 max-w-[1600px] mx-auto">
@@ -177,7 +179,7 @@ export default function AboutPage() {
       </section>
 
       {/* ===== ABOUT CLINIC COMPONENT ===== */}
-      <AboutClinic />
+      {/* <AboutClinic /> */}
 
       {/* ===== ENDING SECTION ===== */}
       <section className="text-center px-6 md:px-16 py-24 bg-black text-white mt-12">

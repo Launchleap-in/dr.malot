@@ -23,9 +23,9 @@ export default function ServicesPage() {
       color: "bg-mint",
       textColor: "text-black",
       points: [
-        "• Preventive cleanings",
-        "• Sealants & fluoride treatments",
-        "• Pediatric exams & fillings",
+        "• Pediatric crowns",
+        "• Sealant and flouride treatment",
+        "• Pediatric Space maintainers",
       ],
     },
     {

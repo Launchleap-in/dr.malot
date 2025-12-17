@@ -40,9 +40,12 @@ export default function AboutClinic() {
               </h3>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
-              Our skilled and experienced dentists use the latest technology and
-              techniques to provide dental procedures that are both effective
-              and comfortable.
+              We combine advanced dental technology with precision care to
+              deliver exceptional results. Our clinic is equipped with
+              state-of-the-art digital imaging, painless treatment systems, and
+              modern sterilization protocols. We are committed to using the
+              latest technology for safer, smarter, and more effective dental
+              care.
             </p>
           </AnimatedCard>
 
@@ -75,9 +78,10 @@ export default function AboutClinic() {
               </h3>
             </div>
             <p className="text-black/70 text-sm leading-relaxed">
-              Our skilled and experienced dentists use the latest technology and
-              techniques to provide dental procedures that are both effective
-              and comfortable.
+              At Dr. Malot Dental Clinic, your comfort comes first. Our warm,
+              welcoming space is designed to help you feel relaxed from the
+              moment you arrive. With gentle care, modern technology, and a
+              compassionate team, we ensure every visit is calm and stress-free.
             </p>
           </AnimatedCard>
 

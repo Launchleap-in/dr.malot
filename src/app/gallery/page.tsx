@@ -6,93 +6,152 @@ import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
 
 const galleryImages = [
-  { src: "/dr.malot.jpg", alt: "Dr. Malot", size: "large" },
+  { src: "/dr.malot.jpg", alt: "Dr. Rajnikant Malot", size: "large" },
 
   {
     src: "/di.png",
-    alt: "Dr.Nidhi",
-
+    alt: "Dr. Mitrata ",
     size: "medium",
   },
 
+  // {
+  //   src: "/dr.saranshFull.jpg",
+  //   alt: "Dr. Saransh Malot",
+  //   size: "large",
+  // },
+  {
+    src: "/dr.woking (1).jpeg",
+    alt: "Dr. Saransh during dental procedure",
+    size: "large",
+  },
+
+  // { src: "/team.jpg", alt: "Dental Team at Malot Clinic", size: "large" },
+
+  {
+    src: "/woking.jpeg",
+    alt: "Dr.Mitrata during dental procedure",
+    size: "large",
+  },
+
+  // {
+  //   src: "/dr.saranshFull.jpg",
+  //   alt: "Dr. Saransh Malot",
+  //   size: "large",
+  // },
+
+  // {
+  //   src: "/team/dr.nidhi1.jpg",
+  //   alt: "Dr. Mitrata Vyas Malot",
+  //   size: "small",
+  // },
+
+  // { src: "/team/t1.jpg", alt: "Malot Dental Clinic Team", size: "medium" },
+  // {
+  //   src: "/team/ts.jpg",
+  //   alt: "Doctors and Staff at Malot Dental Clinic",
+  //   size: "medium",
+  // },
+
+  // {
+  //   src: "/Gallery/2.jpeg",
+  //   alt: "Dr. Mitrata Vyas Malot performing treatment",
+  //   size: "medium",
+  // },
+
+  {
+    src: "/Gallery/3.jpeg",
+    alt: "Dr.Malot Logo",
+    size: "small",
+  },
+  {
+    src: "/team/dr.saransh.jpg",
+    alt: "Dr. Saransh",
+    size: "small",
+  },
   {
     src: "/dr.saransh.jpg",
     alt: "Dr. Saransh",
+    size: "medium",
+  },
 
+  {
+    src: "/Gallery/4.jpeg",
+    alt: "Dr.Malot reception Area",
+    size: "large",
+  },
+  {
+    src: "/Gallery/1.jpeg",
+    alt: "Dr. Saransh at clinic",
+    size: "large",
+  },
+  {
+    src: "/Gallery/5.jpeg",
+    alt: "Dr.Malot Clinic",
     size: "medium",
   },
   {
-    src: "/dr.saranshFull.jpg",
-    alt: "Dr.Saransh",
-
-    size: "large",
-  },
-  {
-    src: "/dr.woking (1).jpeg",
-    alt: "Working shot 1",
-
-    size: "large",
-  },
-
-  // { src: "/logoo.png", alt: "Clinic Logo", category: "Brand", size: "small" },
-  { src: "/team.jpg", alt: "Team Photo", size: "large" },
-  {
-    src: "/woking.jpeg",
-    alt: "Working Area",
-
-    size: "large",
-  },
-
-  {
-    src: "/dr.saranshFull.jpg",
-    alt: "Dr.Saransh",
-
-    size: "large",
-  },
-  {
-    src: "/team/dr.nidhi.jpg",
-    alt: "Dr.Nidhi",
-
+    src: "/Gallery/6.jpeg",
+    alt: "Clinic",
     size: "small",
   },
 
   {
-    src: "/team/dr.nidhi1.jpg",
-    alt: "Dr.Nidhi",
-
-    size: "small",
+    src: "/Gallery/7.jpeg",
+    alt: "Dr.Malot dental Chair",
+    size: "medium",
   },
-  // {
-  //   src: "/team/dr.palak.jpg",
-  //   alt: "Dr. Palak",
-
-  //   size: "small",
-  // },
   {
-    src: "/team/dr.saransh.jpg",
-    alt: "Dr. Saransh ",
+    src: "/Gallery/8.jpeg",
+    alt: "Dr. Saransh Cablin",
+    size: "large",
+  },
 
+  {
+    src: "/Gallery/9.jpeg",
+    alt: "Dr. Saransh  with dental equipment",
     size: "small",
   },
 
-  { src: "/team/t1.jpg", alt: "Team 1", size: "medium" },
-  { src: "/team/ts.jpg", alt: "Team 2", size: "medium" },
-
-  { src: "/Gallery/1.jpeg", alt: "Dr.Malot1", size: "large" },
-  { src: "/Gallery/2.jpeg", alt: "Dr.Malot2", size: "medium" },
-  { src: "/Gallery/3.jpeg", alt: "Dr.Malot3", size: "small" },
-
-  { src: "/Gallery/4.jpeg", alt: "Dr.Malot4", size: "large" },
-  { src: "/Gallery/5.jpeg", alt: "Dr.Malot5", size: "medium" },
-  { src: "/Gallery/6.jpeg", alt: "Dr.Malot6", size: "small" },
-
-  { src: "/Gallery/7.jpeg", alt: "Dr.Malot7", size: "medium" },
-  { src: "/Gallery/8.jpeg", alt: "Dr.Malot8", size: "large" },
-  { src: "/Gallery/9.jpeg", alt: "Dr.Malot9", size: "small" },
-
-  { src: "/Gallery/10.jpeg", alt: "Dr.Malot10", size: "medium" },
-  { src: "/Gallery/11.jpeg", alt: "Dr.Malot11", size: "small" },
-  { src: "/Gallery/12.jpeg", alt: "Dr.Malot12", size: "large" },
+  {
+    src: "/dr.nidhi.jpeg",
+    alt: "Dr.  Mitrata during dental procedure",
+    size: "small",
+  },
+  {
+    src: "/dr.nidhi.jpg",
+    alt: "Dr.Mitrata during dental procedure",
+    size: "large",
+  },
+  {
+    src: "/Gallery/10.jpeg",
+    alt: "Clinic Chair",
+    size: "medium",
+  },
+  {
+    src: "/Gallery/11.jpeg",
+    alt: "Dental Chair",
+    size: "small",
+  },
+  {
+    src: "/Gallery/12.jpeg",
+    alt: "Serving Health Since 1980",
+    size: "large",
+  },
+  {
+    src: "/instuments/1.jpeg",
+    alt: "Woodpecker Implanter",
+    size: "large",
+  },
+  {
+    src: "/instuments/2.jpeg",
+    alt: "portable dental X-ray machine",
+    size: "large",
+  },
+  {
+    src: "/instuments/3.jpeg",
+    alt: "Osstem 122 Taper Kit",
+    size: "large",
+  },
 ];
 
 export default function GalleryPage() {

@@ -46,8 +46,15 @@ export default function Footer() {
               <h3 className="text-2xl font-bold">Contact</h3>
               <ul className="space-y-4 text-black/70 font-medium">
                 <li className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 mt-0.5" />
-                  <span>+91 77420 36693</span>
+                  <Phone className="w-5 h-5 mt-3" />
+                  <div className="flex flex-col">
+                    <a href="tel:+919828423669" className="hover:text-black">
+                      +91 98284 23669
+                    </a>
+                    <a href="tel:+917742036693" className="hover:text-black">
+                      +91 77420 36693
+                    </a>
+                  </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Mail className="w-5 h-5 mt-0.5" />
@@ -91,19 +98,19 @@ export default function Footer() {
               {/* Social Icons */}
               <div className="flex gap-4 pt-4">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/dr_malot_dental_clinic_?igsh=dHFhMGZ2YTN2cTV2"
                   className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center hover:bg-black hover:text-white transition-colors"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a
+                {/* <a
                   href="#"
                   className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center hover:bg-black hover:text-white transition-colors"
                 >
                   <Facebook className="w-5 h-5" />
-                </a>
+                </a> */}
                 <a
-                  href="#"
+                  href="https://youtube.com/@budybetterunderstandingofd6469?si=XNBCFbLfEYu-VE7o"
                   className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center hover:bg-black hover:text-white transition-colors"
                 >
                   <Youtube className="w-5 h-5" />

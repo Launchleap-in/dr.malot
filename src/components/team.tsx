@@ -21,8 +21,8 @@ export default function MeetOurTeam() {
         icon: Award,
         bgColor: "bg-mint",
         credentials: [
-          "Associate professor At DDCH, Udaipur",
-          "BDS, MDS Prosthodontist and Implantologist",
+          "Professor at PDCRC, Udaipur",
+          "BDS,MDS Prosthodontist & Implantologist",
           "Implant certification AIC Korea",
           "National speaker for Wan core implants",
           "Key opinion leader for Veritas",
@@ -32,11 +32,13 @@ export default function MeetOurTeam() {
       {
         name: "Dr. MITRATA VYAS MALOT",
         role: "Senior Dentist",
-        image: "/didi.jpg",
+        image: "/dr.nidhi.jpg",
         icon: Heart,
         bgColor: "bg-lavender",
         credentials: [
-          "BDS, MDS Pediatric dentist",
+          "Assistant professor at DDCH, Udaipur",
+          // "BDS, MDS Pediatric dentist",
+          "BDS,MDS Pediatric & Preventive Dentist",
           "Specialist in kids dental treatment",
         ],
         extraNote:
