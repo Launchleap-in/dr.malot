@@ -47,22 +47,45 @@ function page() {
                   <item.icon className="w-5 h-5" />
                 </div>
                 <h3 className="font-bold text-lg">{item.title}</h3>
-                <div className="text-black/70 font-medium text-center">
-                  {Array.isArray(item.text) ? (
-                    <div className="flex flex-col gap-1">
+                <div className="text-black/70 font-medium text-center w-full overflow-hidden">
+                  {/* CALL */}
+                  {item.title === "Call Us" && Array.isArray(item.text) && (
+                    <div className="flex flex-col gap-1 w-full">
                       {item.text.map((value, index) => (
                         <a
                           key={index}
                           href={`tel:${value.replace(/\s+/g, "")}`}
-                          className="hover:text-black"
+                          className="block w-full break-all hover:text-black"
                         >
                           {value}
                         </a>
                       ))}
                     </div>
-                  ) : (
-                    <p>{item.text}</p>
                   )}
+
+                  {/* EMAIL */}
+                  {item.title === "Email Us" &&
+                    typeof item.text === "string" && (
+                      <a
+                        href={`mailto:${item.text}`}
+                        className="block w-full break-all hover:text-black"
+                      >
+                        {item.text}
+                      </a>
+                    )}
+
+                  {/* VISIT */}
+                  {item.title === "Visit Us" &&
+                    typeof item.text === "string" && (
+                      <a
+                        href="https://www.google.com/maps?q=Dr+Malot+Dental+Clinic,+Udaipur,+India"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full break-words hover:text-black"
+                      >
+                        {item.text}
+                      </a>
+                    )}
                 </div>
               </div>
             ))}

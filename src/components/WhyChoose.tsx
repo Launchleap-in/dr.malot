@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
     <section className="px-4 sm:px-6 lg:px-8 py-8 bg-background">
       <div className="max-w-[1600px] mx-auto bg-white rounded-[2.5rem] p-6 sm:p-12 lg:p-20 text-black overflow-hidden border border-border/50">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
-          <div className="lg:w-1/3">
+          <div className="w-full lg:w-1/3">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-mint rounded-full text-sm font-bold mb-8 text-black">
               <Award className="w-4 h-4" />
               Why Choose Us
@@ -57,13 +57,13 @@ export default function WhyChooseUs() {
             </Button>
           </div>
 
-          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
             {reasons.map((item, i) => (
               <AnimatedCard
                 key={i}
                 delay={i * 0.1}
                 hoverEffect={true}
-                className={`${item.color} h-full`}
+                className={`${item.color} h-full min-h-[260px]`}
               >
                 <div className="w-12 h-12 bg-white/80 backdrop-blur rounded-full flex items-center justify-center mb-6 shadow-sm">
                   <item.icon className="w-6 h-6 text-black" />

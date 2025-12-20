@@ -57,15 +57,26 @@ export default function Footer() {
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 mt-0.5" />
-                  <span>drmalotdentalclinic@gmail.com</span>
+                  <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                  <a
+                    href="mailto:drmalotdentalclinic@gmail.com"
+                    className="block w-full break-all hover:text-black"
+                  >
+                    drmalotdentalclinic@gmail.com
+                  </a>
                 </li>
+
                 <li className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 mt-0.5" />
-                  <span>
+                  <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                  <a
+                    href="https://www.google.com/maps?q=1st+Floor,+24-C+Sohan+Bhawan,+Opp.+Madhuvan+Head+Post+Office,+Chetak+Circle,+Udaipur+313001"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full break-words hover:text-black"
+                  >
                     1st Floor, 24-C Sohan Bhawan, Opp. Madhuvan Head Post
                     Office, Chetak Circle, Udaipur 313001
-                  </span>
+                  </a>
                 </li>
               </ul>
             </div>

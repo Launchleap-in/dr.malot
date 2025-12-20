@@ -43,7 +43,7 @@ export default function ServicesPage() {
 
   return (
     <section className="px-4 sm:px-6 lg:px-8 py-8 bg-background">
-      <div className="max-w-[1600px] mx-auto bg-dark rounded-[2.5rem] p-6 sm:p-12 lg:p-20 text-white overflow-hidden relative">
+      <div className="max-w-[1600px] mx-auto bg-dark rounded-[2.5rem] p-6 md:p-8 lg:p-20 text-white overflow-hidden relative">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -77,12 +77,12 @@ export default function ServicesPage() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <AnimatedCard
               key={index}
               delay={index * 0.1}
-              className={`${service.color} ${service.textColor} min-h-[340px] group`}
+              className={`${service.color} ${service.textColor} min-h-[300px] md:min-h-[280px] lg:min-h-[340px] group`}
             >
               {/* Top Arrow Icon */}
               <div className="absolute top-6 right-6 w-10 h-10 bg-black/10 rounded-full flex items-center justify-center group-hover:bg-black group-hover:text-white transition-colors duration-300">
@@ -94,7 +94,7 @@ export default function ServicesPage() {
                   {service.title}
                 </h3>
 
-                <p className="opacity-80 text-sm sm:text-base leading-relaxed mb-4">
+                <p className="opacity-80 text-sm md:text-[15px] lg:text-base leading-relaxed mb-4">
                   {service.desc}
                 </p>
 

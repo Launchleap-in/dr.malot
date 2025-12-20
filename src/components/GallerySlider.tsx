@@ -25,7 +25,7 @@ export default function GalleryPage() {
 
   return (
     <section className="px-4 sm:px-6 lg:px-8 py-8 bg-background">
-      <div className="max-w-[1600px] mx-auto bg-white rounded-[2.5rem] p-8 sm:p-12 lg:p-20 overflow-hidden border border-border/50">
+      <div className="max-w-[1600px] mx-auto bg-white rounded-[2.5rem] p-6 md:p-8 lg:p-20 overflow-hidden border border-border/50">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-black">
             Transformations
@@ -40,9 +40,9 @@ export default function GalleryPage() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: i * 0.1 }}
-              className="bg-gray-50 rounded-3xl p-4 pb-6"
+              className="bg-gray-50 rounded-3xl p-3 md:p-4 pb-5"
             >
-              <div className="rounded-2xl overflow-hidden border border-border shadow-sm mb-4 bg-white">
+              <div className="rounded-2xl overflow-hidden border border-border shadow-sm mb-3 bg-white">
                 <BeforeAfterSlider before={item.before} after={item.after} />
               </div>
               <h3 className="text-center font-bold text-lg text-black">

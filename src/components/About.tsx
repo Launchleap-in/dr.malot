@@ -23,11 +23,11 @@ export default function AboutClinic() {
         </motion.div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
           {/* Card 1: Innovation (Dark) */}
           <AnimatedCard
             delay={0.1}
-            className="col-span-1 lg:col-span-1 bg-black text-white min-h-[320px] group"
+            className="col-span-1 bg-black text-white min-h-[320px] md:min-h-[360px] group"
           >
             <div>
               <div className="bg-white/10 w-12 h-12 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -53,7 +53,7 @@ export default function AboutClinic() {
           <AnimatedCard
             delay={0.2}
             variant="scale-in"
-            className="col-span-1 lg:col-span-1 bg-muted p-0 sm:p-0 min-h-[320px]"
+            className="col-span-1 bg-muted p-0 sm:p-0 min-h-[320px] md:min-h-[360px]"
           >
             <img
               src="/team.jpg"
@@ -65,7 +65,7 @@ export default function AboutClinic() {
           {/* Card 3: Comfort (Lavender) */}
           <AnimatedCard
             delay={0.3}
-            className="col-span-1 lg:col-span-1 bg-lavender text-black min-h-[320px] group"
+            className="col-span-1 bg-lavender text-black min-h-[320px] md:min-h-[360px] group"
           >
             <div>
               <div className="bg-white/50 w-12 h-12 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -88,7 +88,7 @@ export default function AboutClinic() {
           {/* Card 4: Qualified Staff (White with Border) */}
           <AnimatedCard
             delay={0.4}
-            className="col-span-1 md:col-span-2 lg:col-span-1 bg-white border border-border text-black min-h-[300px] group"
+            className="col-span-1 bg-white border border-border text-black min-h-[320px] md:min-h-[360px] group"
           >
             <div>
               <div className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
