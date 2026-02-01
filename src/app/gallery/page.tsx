@@ -156,24 +156,29 @@ const galleryImages = [
 
 export default function GalleryPage() {
   return (
-    <main className="min-h-screen bg-[var(--background)]">
+    <main className="min-h-screen ">
       <Navbar />
 
       {/* Header Section */}
-      <section className="pt-32 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">
-            Our Gallery
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+      <section className="relative px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        <div className="max-w-[1600px] mx-auto bg-[#fbf7e3] rounded-[2.5rem] px-6 py-16 md:py-24 relative overflow-hidden text-center mb-8 md:mb-12">
+          {/* Soft Glow */}
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white/40 blur-[100px] opacity-70 pointer-events-none"></div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 text-5xl md:text-7xl font-bold text-black mb-6"
+          >
+            Our <span className="text-black/60">Gallery</span>
+          </motion.h1>
+
+          <p className="relative z-10 text-black/70 mt-4 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed font-medium">
             Take a look inside our state-of-the-art clinic and see the smiles
             we&apos;ve transformed.
           </p>
-        </motion.div>
+        </div>
       </section>
 
       {/* Gallery Grid - Modern Masonry Layout */}

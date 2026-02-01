@@ -66,29 +66,31 @@ const BlogShowcase: React.FC = () => {
 
   return (
     <section
-      className={`px-3 xs:px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 bg-background ${montserrat.className}`}
+      className={`px-3 xs:px-4 sm:px-6 lg:px-8 pt-16 pb-12 sm:pb-16 md:pb-20 lg:pb-24 bg-background ${montserrat.className}`}
     >
-      <div className="max-w-[1600px] mx-auto bg-cream rounded-2xl sm:rounded-3xl lg:rounded-[2.5rem] p-6 xs:p-8 sm:p-10 md:p-12 lg:p-16 xl:p-20 text-black overflow-hidden">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-10 sm:mb-12 lg:mb-16"
-        >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-white/60 backdrop-blur-sm rounded-full text-xs sm:text-sm font-bold mb-3 sm:mb-4 text-black border border-black/5">
-            <Rss className="w-3 h-3 sm:w-4 sm:h-4" />
-            <span>Our Blog</span>
-          </div>
-          <h2 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-3 sm:mb-4 px-2">
-            Insights from Our Experts
-          </h2>
-          <p className="text-black/60 max-w-2xl mx-auto text-base sm:text-lg px-4">
+      <div className="relative px-2 sm:px-6 lg:px-8 pt-0 pb-12 sm:pb-20">
+        <div className="max-w-[1600px] mx-auto bg-[#fff9f0] rounded-[2.5rem] px-6 py-16 md:py-24 relative overflow-hidden text-center mb-10 sm:mb-12 lg:mb-16">
+          {/* Soft Glow */}
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white/40 blur-[100px] opacity-70 pointer-events-none"></div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-3 sm:mb-4 px-2 text-black"
+          >
+            Our <span className="text-black/60">Blog</span>
+          </motion.h1>
+
+          <p className="relative z-10 text-black/70 mt-4 max-w-2xl mx-auto text-base sm:text-lg px-4">
             Stay updated with the latest news, tips, and articles on dental
             health and wellness from our experienced team.
           </p>
-        </motion.div>
+        </div>
+      </div>
+
+      <div className="max-w-[1600px] mx-auto bg-[#dbe0ff] rounded-2xl sm:rounded-3xl lg:rounded-[2.5rem] p-6 xs:p-8 sm:p-10 md:p-12 lg:p-16 xl:p-20 text-black overflow-hidden">
+        {/* Header */}
 
         {/* Content */}
         <div>
