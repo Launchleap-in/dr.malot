@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Instagram,
-  Youtube,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,7 +17,7 @@ export default function Footer() {
               {/* Image Container */}
               <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-md cursor-pointer hover:scale-[1.02] transition-transform mx-auto">
                 <a
-                  href="https://www.google.com/maps?q=1st+Floor,+24-C+Sohan+Bhawan,+Opp.+Madhuvan+Head+Post+Office,+Chetak+Circle,+Udaipur+313001"
+                  href="https://maps.app.goo.gl/sYuretwsYVpZmCFa8"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -69,7 +62,7 @@ export default function Footer() {
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                   <a
-                    href="https://www.google.com/maps?q=1st+Floor,+24-C+Sohan+Bhawan,+Opp.+Madhuvan+Head+Post+Office,+Chetak+Circle,+Udaipur+313001"
+                    href="https://maps.app.goo.gl/sYuretwsYVpZmCFa8"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full break-words hover:text-black"

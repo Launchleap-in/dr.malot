@@ -5,25 +5,25 @@ import { motion } from "framer-motion";
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "Alice Thompson",
-      role: "Marketing Manager",
-      img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200&h=200",
+      name: "Pallavi Singh",
+      role: "Pediatric Dental Care",
+      img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200",
       review:
-        "It was the best decision I made for my oral health. The team is not only professional but also caring. They take the time to explain procedures and make sure you're comfortable every step of the way. Highly recommended.",
+        "I visited Dr. Mitrata Malot's dental clinic for my son's check up. Your gentle approach, patience and ability to make the whole experience comfortable and even fun really stood out. We feel very lucky to have found you. I especially appreciated the way you communicated with my son. You are very humble and kind. The best dentist for the kids!",
     },
     {
-      name: "Emily Davis",
-      role: "Teacher",
-      img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200",
+      name: "Jagdish Salvi",
+      role: "Dental Implants",
+      img: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&q=80&w=200&h=200",
       review:
-        "As someone with dental anxiety, finding a clinic at ease was crucial. The team at Dento is understanding and patient. They address my concerns, and I appreciate the personalized care I receive. Thank you for making each visit a positive experience.",
+        "One of the best dentist who tries to understand your problem and customise the treatment according to your need and budget. I had done implant treatment for my lower teeth and it was near painless procedure. Dr Malot is a good understanding and knowledgeable doctor and very helpful. Thanks for such comfortable environment and making dental procedures easy.",
     },
     {
-      name: "Michael Chen",
-      role: "Financial Analyst",
+      name: "Irfan Sheikh",
+      role: "General Dentistry",
       img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200",
       review:
-        "I've been a patient at Your Dental Practice for years, and the consistent high-quality service keeps me coming back. From routine cleanings to a more complex procedure, the professionalism and friendliness of the staff are unmatched.",
+        "Exceptional care and service! Professional staff, clean facility, and painless treatments. Outstanding experience from start to finish. The best dental care I've ever received. Trustworthy, skilled, and friendly team. This clinic sets the bar high for dental care!",
     },
   ];
 

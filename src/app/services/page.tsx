@@ -634,7 +634,7 @@ export default function FullServicePage() {
               <Card
                 onClick={() => {
                   const match = detailedSections.find(
-                    (d) => d.title === service.title
+                    (d) => d.title === service.title,
                   );
                   if (match) {
                     setSelectedService(match);

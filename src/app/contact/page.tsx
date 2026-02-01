@@ -1,5 +1,5 @@
 import AppointmentSection from "@/src/components/ContactForm";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 function page() {
@@ -78,7 +78,7 @@ function page() {
                   {item.title === "Visit Us" &&
                     typeof item.text === "string" && (
                       <a
-                        href="https://www.google.com/maps?q=Dr+Malot+Dental+Clinic,+Udaipur,+India"
+                        href="https://maps.app.goo.gl/sYuretwsYVpZmCFa8"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block w-full break-words hover:text-black"
