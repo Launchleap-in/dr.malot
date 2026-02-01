@@ -9,21 +9,46 @@ import Image from "next/image";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const [theme, setTheme] = useState("light");
 
+  // Initialize theme synchronously on client to avoid flicker.
+  // Default to light when window is not available (SSR).
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    if (typeof window === "undefined") return "light";
+    try {
+      const stored = localStorage.getItem("theme");
+      if (stored === "dark" || stored === "light") return stored;
+    } catch (e) {
+      /* ignore localStorage errors */
+    }
+    // fallback to system preference
+    return window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  });
+
+  // mark mounted (used to avoid hydration mismatch for icon buttons)
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true);
+  }, []);
+
+  // Apply theme class and persist changes
+  useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (e) {
+      /* ignore localStorage errors */
+    }
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  const toggleTheme = () =>
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -114,7 +139,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-3 mt-2">
             <Link
-              className="flex-1 bg-black text-white px-5 py-3 rounded-xl text-sm font-medium"
+              className="flex-1 bg-black text-white px-5 py-3 rounded-xl text-sm font-medium text-center"
               href={"/contact#ContactForm"}
             >
               Book Appointment
