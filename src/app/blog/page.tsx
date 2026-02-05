@@ -22,8 +22,8 @@ const BlogShowcase: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>();
 
-  const username = "anshulsharmasde";
-  const limit = 6;
+  const username = "drmalotdentalclinic";
+  const limit = 10;
 
   useEffect(() => {
     const fetchPosts = async () => {
