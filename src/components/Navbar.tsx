@@ -70,7 +70,7 @@ export default function Navbar() {
       >
         {/* Logo - Use transparent PNG for best results */}
         <Image
-          src="/logoo.png"
+          src="/logo.png"
           alt="Dr. Malot Logo"
           width={100}
           height={100}
