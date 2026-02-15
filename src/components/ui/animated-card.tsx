@@ -20,6 +20,7 @@ export function AnimatedCard({
   delay = 0,
   hoverEffect = false,
   variant = "fade-up",
+  ...props
 }: AnimatedCardProps) {
   const variants = {
     "fade-up": {
@@ -50,6 +51,7 @@ export function AnimatedCard({
           "group hover:scale-[1.02] transition-transform duration-300",
         className,
       )}
+      {...props}
     >
       {children}
     </motion.div>

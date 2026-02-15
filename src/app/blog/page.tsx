@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
-import { ArrowRight, Rss } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatedCard } from "@/src/components/ui/animated-card";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -18,41 +18,34 @@ interface BlogPost {
 }
 
 const BlogShowcase: React.FC = () => {
-  const [blogPosts, setPosts] = useState<BlogPost[]>();
+  const [blogPosts, setPosts] = useState<BlogPost[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>();
-
-  const username = "drmalotdentalclinic";
-  const limit = 10;
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage = 3;
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await fetch(
-          `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${username}`,
-        );
+        const res = await fetch("/api/medium-feed");
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
-        const feed = await res.json();
-        if (feed.status !== "ok") {
-          throw new Error(feed.message || "Failed to fetch valid RSS feed.");
-        }
+        const data = await res.json();
+        const items = data.items || [];
 
-        const blogPosts = feed.items.slice(0, limit).map((item: any) => ({
+        const allPosts = items.map((item: any) => ({
           title: item.title || "No title available",
           subtitle: item.description
             ? new DOMParser()
                 .parseFromString(item.description, "text/html")
                 .body.textContent?.slice(0, 120) + "..."
             : "No subtitle available",
-          thumbnail:
-            item.thumbnail ||
-            "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+          thumbnail: item.thumbnail || "/logo.png",
           link: item.link || "#",
           pubDate: item.pubDate || "No date available",
         }));
-        setPosts(blogPosts);
+        setPosts(allPosts);
       } catch (err: any) {
         console.error("Error fetching blog posts:", err);
         setError(`Failed to load blog posts: ${err.message}`);
@@ -62,7 +55,25 @@ const BlogShowcase: React.FC = () => {
     };
 
     fetchPosts();
-  }, [username, limit]);
+  }, []);
+
+  // Pagination Logic
+  const indexOfLastPost = currentPage * itemsPerPage;
+  const indexOfFirstPost = indexOfLastPost - itemsPerPage;
+  const currentPosts = blogPosts.slice(indexOfFirstPost, indexOfLastPost);
+  const totalPages = Math.ceil(blogPosts.length / itemsPerPage);
+
+  const handlePrevious = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prev) => prev + 1);
+    }
+  };
 
   return (
     <section
@@ -107,52 +118,81 @@ const BlogShowcase: React.FC = () => {
           )}
 
           {!isLoading && !error && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 lg:gap-8">
-              {blogPosts?.map((post: BlogPost, index: number) => (
-                <AnimatedCard
-                  key={index}
-                  delay={index * 0.1}
-                  className="bg-white p-0 flex flex-col group cursor-pointer border border-black/5 shadow-sm hover:shadow-xl transition-shadow duration-300"
-                  onClick={() => window.open(post.link, "_blank")}
-                >
-                  {/* Image Container */}
-                  <div className="relative w-full h-48 xs:h-52 sm:h-56 md:h-60 lg:h-56 xl:h-64 overflow-hidden rounded-t-2xl sm:rounded-t-3xl">
-                    <Image
-                      src={post.thumbnail}
-                      alt={post.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      style={{ objectFit: "cover" }}
-                      className="transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  </div>
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 lg:gap-8 mb-12">
+                {currentPosts.map((post: BlogPost, index: number) => (
+                  <AnimatedCard
+                    key={index}
+                    delay={index * 0.1}
+                    className="bg-white p-0 flex flex-col group cursor-pointer border border-black/5 shadow-sm hover:shadow-xl transition-shadow duration-300"
+                    onClick={() => window.open(post.link, "_blank")}
+                  >
+                    {/* Image Container */}
+                    <div className="relative w-full h-48 xs:h-52 sm:h-56 md:h-60 lg:h-56 xl:h-64 overflow-hidden rounded-t-2xl sm:rounded-t-3xl bg-gray-50">
+                      <Image
+                        src={post.thumbnail}
+                        alt={post.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        style={{
+                          objectFit: "contain",
+                        }}
+                        className="transition-transform duration-500 group-hover:scale-105 p-2"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none"></div>
+                    </div>
 
-                  {/* Content */}
-                  <div className="p-4 xs:p-5 sm:p-6 flex flex-col flex-grow">
-                    <h3 className="text-lg xs:text-xl sm:text-xl font-bold text-black mb-2 line-clamp-2">
-                      {post.title}
-                    </h3>
-                    <p className="text-black/60 text-sm sm:text-sm mb-3 sm:mb-4 flex-grow line-clamp-3">
-                      {post.subtitle}
-                    </p>
-                    <div className="flex flex-col xs:flex-row justify-between items-start xs:items-center gap-3 xs:gap-0 mt-auto pt-3 sm:pt-4 border-t border-black/5">
-                      <span className="text-xs sm:text-xs text-black/50 font-medium">
-                        {new Date(post.pubDate).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        })}
-                      </span>
-                      <div className="inline-flex items-center text-black font-semibold">
-                        <span className="mr-2 text-sm">Read More</span>
-                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    {/* Content */}
+                    <div className="p-4 xs:p-5 sm:p-6 flex flex-col flex-grow">
+                      <h3 className="text-lg xs:text-xl sm:text-xl font-bold text-black mb-2 line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-black/60 text-sm sm:text-sm mb-3 sm:mb-4 flex-grow line-clamp-3">
+                        {post.subtitle}
+                      </p>
+                      <div className="flex flex-col xs:flex-row justify-between items-start xs:items-center gap-3 xs:gap-0 mt-auto pt-3 sm:pt-4 border-t border-black/5">
+                        <span className="text-xs sm:text-xs text-black/50 font-medium">
+                          {new Date(post.pubDate).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          })}
+                        </span>
+                        <div className="inline-flex items-center text-black font-semibold">
+                          <span className="mr-2 text-sm">Read More</span>
+                          <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </AnimatedCard>
-              ))}
-            </div>
+                  </AnimatedCard>
+                ))}
+              </div>
+
+              {/* Pagination Controls */}
+              {totalPages > 1 && (
+                <div className="flex justify-center items-center gap-4 mt-8">
+                  <button
+                    onClick={handlePrevious}
+                    disabled={currentPage === 1}
+                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-semibold shadow-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                    Previous
+                  </button>
+                  <span className="text-black font-medium">
+                    Page {currentPage} of {totalPages}
+                  </span>
+                  <button
+                    onClick={handleNext}
+                    disabled={currentPage === totalPages}
+                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-semibold shadow-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors"
+                  >
+                    Next
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>

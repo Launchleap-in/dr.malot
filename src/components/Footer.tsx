@@ -133,8 +133,20 @@ export default function Footer() {
         <div className="mt-20 pt-8 border-t border-black/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm font-medium opacity-50">
           <p>© {new Date().getFullYear()} Dr. Malot. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <Link
+              href="/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms-of-service"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>
